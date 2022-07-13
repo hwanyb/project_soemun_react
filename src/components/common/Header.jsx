@@ -2,10 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-import ArtSchool from '../../pages/ArtSchool';
-import Food from '../../pages/Food';
-import Introduce from '../../pages/Introduce';
-import Notice from '../../pages/Notice';
 import { PyeongBold, PyeongLight } from '../../style/Common';
 
 const Base = styled.header`
@@ -18,8 +14,8 @@ const Base = styled.header`
   z-index: 99999;
   top: 0;
   padding: 0 200px;
+  align-items: center;
 `;
-const LogoWrapper = styled.div``;
 const StyledLink = styled(Link)`
     text-decoration: none;
     box-sizing: border-box;
@@ -34,17 +30,20 @@ const LogoTitle = styled(PyeongBold)`
 const NavItem = styled(PyeongLight)`
     color: #fff;
     font-size: 14px;
+    margin-left: 30px;
+    transition: all 0.2s ease-in-out;
+    &:hover{
+        color: #FFC806;
+    }
 `;
 
 export default function Header() {
   return (
     <Base>
-      <LogoWrapper>
         <StyledLink to="/">
           {/* <LogoImg src="https://hwanyb.github.io/project_seomun/img/Artboard%203.png" alt="header_logo" /> */}
           <LogoTitle>서문시장 야시장</LogoTitle>
         </StyledLink>
-      </LogoWrapper>
       <HeaderNav>
         <StyledLink to="/introduce">
           <NavItem>소개</NavItem>
