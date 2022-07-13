@@ -1,8 +1,10 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Lazy } from "swiper";
+import { Autoplay } from "swiper";
 import "swiper/css";
 import styled from "styled-components";
+import { PyeongBold, PyeongLight } from "../style/Common";
+import Background from "../components/Background";
 
 const HomeMain = styled.main`
   position: relative;
@@ -15,16 +17,66 @@ const Section1 = styled.section`
 `;
 const StyledSwiper1 = styled(Swiper)`
   width: 100%;
-  height: 80vh;
-  &>.swiper-slide{
-    overflow: hidden;
+  height: 700px;
+  overflow: hidden;
+  & .swiper-slide {
     width: 100%;
     & img {
       width: 100vw;
+      object-fit: cover;
+      object-position: bottom;
     }
   }
 `;
-
+const TextWrapper = styled.div`
+  position: absolute;
+  top: 230px;
+  width: 100%;
+  text-align: center;
+`;
+const LogoTitle = styled(PyeongBold)`
+  color: #ffc806;
+  font-size: 50px;
+`;
+const Slogan = styled(PyeongLight)`
+  color: #fff;
+  font-size: 24px;
+  margin-top: 30px;
+  text-shadow: 2px 2px 3px #000000a7;
+`;
+const Section2 = styled.section`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 500px;
+  justify-content: center;
+  background-color: #0a1124;
+  padding: 30px;
+`;
+const IntroWrapper = styled.div`
+  position: absolute;
+  text-align: center;
+`;
+const IntroduceTextLight = styled(PyeongLight)`
+  color: #ffc806;
+  font-size: 14px;
+  line-height: 20px;
+`;
+const IntroduceText = styled(PyeongBold)`
+  color: #fff;
+  font-size: 30px;
+  margin: 20px 0;
+`;
+const IntroBtn = styled.button`
+  background-color: #ffc806;
+  color: #0a1124;
+  padding: 3px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 10px;
+  cursor: pointer;
+`;
 export default function Home() {
   const mainSwiperArr = [
     {
@@ -52,22 +104,31 @@ export default function Home() {
             disableOnInteraction: false,
           }}
           loop={true}
-          centeredSlides={true}
-          slidesPerView={1}
-          lazy={true}
+          modules={[Autoplay]}
           className="mySwiper"
-          modules={[ Autoplay, Lazy ]}
-          l
         >
           {mainSwiperArr.map((slide) => (
             <SwiperSlide key={slide.id}>
-              <img src={slide.url} className="swiper-lazy-preloader swiper-lazy-preloader-white" alt="seomun" />
-              <h1>서문시장 야시장</h1>
-              <h2>{slide.text}</h2>
+              <img src={slide.url} alt="seomun" />
+              <TextWrapper>
+                <LogoTitle>서문시장 야시장</LogoTitle>
+                <Slogan>{slide.text}</Slogan>
+              </TextWrapper>
             </SwiperSlide>
           ))}
         </StyledSwiper1>
       </Section1>
+      <Section2>
+        <Background />
+        <IntroWrapper>
+          <IntroduceTextLight>단순한 스트리트마켓이 아니다!</IntroduceTextLight>
+          <IntroduceTextLight>
+            글로벌하게 먹고, 마시고, 즐길 수 있는
+          </IntroduceTextLight>
+          <IntroduceText>대한민국 No.1 야시장</IntroduceText>
+          <IntroBtn>더보기</IntroBtn>
+        </IntroWrapper>
+      </Section2>
     </HomeMain>
   );
 }

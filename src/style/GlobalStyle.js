@@ -21,6 +21,16 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-family: 'Noto Sans KR', sans-serif;
+}
 `;
 
 export default GlobalStyle;
