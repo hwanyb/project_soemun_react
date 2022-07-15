@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import AsideNav from './components/common/AsideNav';
 import Footer from './components/common/Footer';
 import Header from './components/common/Header';
 import ArtSchool from './pages/ArtSchool';
@@ -15,6 +16,7 @@ function App() {
       <GlobalStyle/>
       <BrowserRouter>
       <Header />
+      <AsideNav />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/introduce' element={<Introduce />} />

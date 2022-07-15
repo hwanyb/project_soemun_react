@@ -25,3 +25,17 @@ export const Noto300 = styled.p`
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 300;
 `;
+
+export const Icon = styled.span`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #081435;
+    font-size: 35px;
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out;
+    &:hover{
+        background-color: #081435;
+        color: #ffc806;
+    }
+`;
