@@ -4,9 +4,10 @@ import styled from "styled-components";
 import { Noto300, PyeongBold } from "../../style/Common";
 
 const Base = styled.footer`
+  width: 100%;
   background-color: #081435;
-  margin-top: 100px;
   padding: 50px 200px;
+  margin-top: 100px;
 `;
 const FooterTop = styled.div`
   display: flex;
@@ -22,7 +23,9 @@ const LogoTitle = styled(PyeongBold)`
   font-size: 30px;
   color: #acbacc;
 `;
-const SnsWrapper = styled.div``;
+const SnsWrapper = styled.div`
+  display: flex;
+`;
 const SnsLink = styled.a`
   &:first-child {
     margin-right: 10px;

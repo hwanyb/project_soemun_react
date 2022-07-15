@@ -16,19 +16,7 @@ const HomeMain = styled.main`
 const Section1 = styled.section`
   width: 100%;
 `;
-const StyledSwiper1 = styled(Swiper)`
-  width: 100%;
-  height: 700px;
-  overflow: hidden;
-  & .swiper-slide {
-    width: 100%;
-    & img {
-      width: 100vw;
-      object-fit: cover;
-      object-position: bottom;
-    }
-  }
-`;
+
 const TextWrapper = styled.div`
   position: absolute;
   top: 230px;
@@ -92,44 +80,116 @@ const ShortcutContainer = styled.div`
   display: flex;
   align-items: center;
   padding: 10px 0;
-
 `;
 const ShortcutWapper = styled.div`
   display: flex;
   align-items: center;
   animation: ${textLoop} 60s linear infinite;
-  &:hover{
+  &:hover {
     animation-play-state: paused;
-   }
+  }
 `;
 const StyledA = styled.a`
-   color: #081435;
-   font-family: 'PyeongChangPeace-Light';
-   font-size: 24px;
-   margin: 0 30px;
-   white-space: nowrap;
-   
+  color: #081435;
+  font-family: "PyeongChangPeace-Light";
+  font-size: 24px;
+  margin: 0 30px;
+  white-space: nowrap;
 `;
 
-const Section3 = styled.section``;
+const Section3 = styled.section`
+width: 100%;
+  background-color: #081435;
+  padding: 80px 200px;
+  text-align: center;
+`;
+const SectionTitle = styled(PyeongBold)`
+  font-size: 30px;
+  color: #ffc806;
+`;
+const SectionDesc = styled(PyeongLight)`
+  font-size: 14px;
+  color: #fff;
+  margin-top: 10px;
+`;
+const StyledSwiper = styled(Swiper)`
+  width: 100%;
+  margin-top: 30px;
+`;
+const StyledSlide = styled(SwiperSlide)`
+width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 30px;
+  img{
+    height: 110%;
+    object-fit: cover;
+    
+  }
+`;
 export default function Home() {
-  const mainSwiperArr = [
+  const swiperImgArr = [
     {
       id: 1,
-      text: `서문시장 야시장과 함께라면 대구의 밤이 곧 파티다!`,
-      url: "https://github.com/hwanyb/project_seomun/blob/master/img/jeonkyeong1_.jpg?raw=true",
+      url: "https://github.com/hwanyb/project_seomun/blob/master/img/sec4_img01.jpg?raw=true"
     },
     {
       id: 2,
-      text: `오감만족! 육감충족! 밤의 즐거움이 한자리에! 서문시장 야시장과 함께하는 夜한 대구여행`,
-      url: "https://github.com/hwanyb/project_seomun/blob/master/img/jeonkyeong2_.jpg?raw=true",
+      url: "https://github.com/hwanyb/project_seomun/blob/master/img/sec4_img02.jpg?raw=true"
     },
     {
       id: 3,
-      text: `먹고, 마시고, 즐길 수 있는 대한민국 No.1 글로벌 야시장`,
-      url: "https://github.com/hwanyb/project_seomun/blob/master/img/jeonkyeong3_.jpg?raw=true",
+      url: "https://github.com/hwanyb/project_seomun/blob/master/img/sec4_img03.jpg?raw=true"
     },
-  ];
+    {
+      id: 4,
+      url: "https://github.com/hwanyb/project_seomun/blob/master/img/sec4_img04.jpg?raw=true"
+    },
+    {
+      id: 5,
+      url: "https://github.com/hwanyb/project_seomun/blob/master/img/sec4_img05.jpg?raw=true"
+    },
+    {
+      id: 6,
+      url: "https://github.com/hwanyb/project_seomun/blob/master/img/sec4_img06.jpg?raw=true"
+    },
+    {
+      id: 7,
+      url: "https://github.com/hwanyb/project_seomun/blob/master/img/sec4_img07.jpg?raw=true"
+    },
+    {
+      id: 8,
+      url: "https://github.com/hwanyb/project_seomun/blob/master/img/sec4_img08.jpg?raw=true"
+    },
+    {
+      id: 9,
+      url: "https://github.com/hwanyb/project_seomun/blob/master/img/sec4_img09.jpg?raw=true"
+    },
+    {
+      id: 10,
+      url: "https://github.com/hwanyb/project_seomun/blob/master/img/shrimp.jpg?raw=true"
+    },
+    {
+      id: 11,
+      url: "https://github.com/hwanyb/project_seomun/blob/master/img/tangsu.jpg?raw=true"
+    },
+    {
+      id: 12,
+      url: "https://github.com/hwanyb/project_seomun/blob/master/img/ttoeokbok.jpg?raw=true"
+    },
+    {
+      id: 13,
+      url: "https://github.com/hwanyb/project_seomun/blob/master/img/gogi.jpg?raw=true"
+    },
+    {
+      id: 14,
+      url: "https://github.com/hwanyb/project_seomun/blob/master/img/kabe.jpg?raw=true"
+    },
+    {
+      id: 15,
+      url: "https://github.com/hwanyb/project_seomun/blob/master/img/kkochi.jpg?raw=true"
+    }
+  ]
   return (
     <HomeMain>
       {/* <Section1>
@@ -153,7 +213,7 @@ export default function Home() {
           ))}
         </StyledSwiper1>
       </Section1> */}
-      
+
       <Section2>
         <Background />
         <IntroWrapper>
@@ -186,7 +246,15 @@ export default function Home() {
         </ShortcutWapper>
       </ShortcutContainer>
       <Section3>
-      
+        <SectionTitle>생생갤러리</SectionTitle>
+        <SectionDesc>서문시장 야시장의 생생한 현장 둘러보기!</SectionDesc>
+        <StyledSwiper slidesPerView={4} spaceBetween={20} slidesPerGroup={3} loop={true}>
+          {swiperImgArr.map((img) => (
+            <StyledSlide key={img.id}>
+              <img src={img.url} />
+            </StyledSlide>
+          ))}
+        </StyledSwiper>
       </Section3>
     </HomeMain>
   );
