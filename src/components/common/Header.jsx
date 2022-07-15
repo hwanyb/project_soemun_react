@@ -7,7 +7,7 @@ import { PyeongBold, PyeongLight } from '../../style/Common';
 const Base = styled.header`
   display: flex;
   justify-content: space-between;
-  background-color: #0A1124;
+  background-color: #ffc806;
   width: 100%;
   height: 70px;
   position: fixed;
@@ -24,16 +24,16 @@ const HeaderNav = styled.nav`
     display: flex;
 `;
 const LogoTitle = styled(PyeongBold)`
-    color: #FFC806;
+    color: #081435;
     font-size: 30px;
 `;
 const NavItem = styled(PyeongLight)`
-    color: #fff;
+    color: #081435;
     font-size: 14px;
     margin-left: 30px;
     transition: all 0.2s ease-in-out;
     &:hover{
-        color: #FFC806;
+        color: #FF9900;
     }
 `;
 

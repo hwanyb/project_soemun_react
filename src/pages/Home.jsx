@@ -2,14 +2,15 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper";
 import "swiper/css";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { PyeongBold, PyeongLight } from "../style/Common";
 import Background from "../components/Background";
+import Cloud from "../components/Cloud";
+import Star from "../components/Star";
 
 const HomeMain = styled.main`
   position: relative;
   top: 70px;
-  overflow-x: hidden;
   width: 100%;
 `;
 const Section1 = styled.section`
@@ -51,7 +52,7 @@ const Section2 = styled.section`
   align-items: center;
   height: 500px;
   justify-content: center;
-  background-color: #0a1124;
+  background-color: #081435;
   padding: 30px;
 `;
 const IntroWrapper = styled.div`
@@ -70,13 +71,47 @@ const IntroduceText = styled(PyeongBold)`
 `;
 const IntroBtn = styled.button`
   background-color: #ffc806;
-  color: #0a1124;
+  color: #081435;
   padding: 3px 20px;
   font-size: 14px;
   font-weight: 500;
   border-radius: 10px;
   cursor: pointer;
 `;
+const textLoop = keyframes`
+  0% {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+    }
+`;
+const ShortcutContainer = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+
+`;
+const ShortcutWapper = styled.div`
+  display: flex;
+  align-items: center;
+  animation: ${textLoop} 60s linear infinite;
+  &:hover{
+    animation-play-state: paused;
+   }
+`;
+const StyledA = styled.a`
+   color: #081435;
+   font-family: 'PyeongChangPeace-Light';
+   font-size: 24px;
+   margin: 0 30px;
+   white-space: nowrap;
+   
+`;
+
+const Section3 = styled.section``;
 export default function Home() {
   const mainSwiperArr = [
     {
@@ -97,7 +132,7 @@ export default function Home() {
   ];
   return (
     <HomeMain>
-      <Section1>
+      {/* <Section1>
         <StyledSwiper1
           autoplay={{
             delay: 2500,
@@ -117,7 +152,8 @@ export default function Home() {
             </SwiperSlide>
           ))}
         </StyledSwiper1>
-      </Section1>
+      </Section1> */}
+      
       <Section2>
         <Background />
         <IntroWrapper>
@@ -129,6 +165,29 @@ export default function Home() {
           <IntroBtn>더보기</IntroBtn>
         </IntroWrapper>
       </Section2>
+      <ShortcutContainer>
+        <ShortcutWapper className="shortcut-wrapper">
+          <Cloud />
+          <StyledA href="#">야시장 음식 스마트폰으로 주문하기</StyledA>
+          <Star />
+          <StyledA href="#">투어미션 성공하고 선물받기</StyledA>
+          <Cloud />
+          <StyledA href="#">야시장 음식 스마트폰으로 주문하기</StyledA>
+          <Star />
+          <StyledA href="#">투어미션 성공하고 선물받기</StyledA>
+          <Cloud />
+          <StyledA href="#">야시장 음식 스마트폰으로 주문하기</StyledA>
+          <Star />
+          <StyledA href="#">투어미션 성공하고 선물받기</StyledA>
+          <Cloud />
+          <StyledA href="#">야시장 음식 스마트폰으로 주문하기</StyledA>
+          <Star />
+          <StyledA href="#">투어미션 성공하고 선물받기</StyledA>
+        </ShortcutWapper>
+      </ShortcutContainer>
+      <Section3>
+      
+      </Section3>
     </HomeMain>
   );
 }

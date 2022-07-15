@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Noto300, PyeongBold } from "../../style/Common";
 
 const Base = styled.footer`
-  background-color: #0a1124;
+  background-color: #081435;
   margin-top: 100px;
   padding: 50px 200px;
 `;
