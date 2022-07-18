@@ -4,6 +4,8 @@ import LNB from "../components/common/LNB";
 import Subtitle from "../components/common/Subtitle";
 import Title from "../components/common/Title";
 import IntroduceMain from "../components/IntroduceMain";
+import OperatingTime from "../components/OperatingTime";
+import WayToCome from "../components/WayToCome";
 
 const Base = styled.div`
   position: relative;
@@ -14,18 +16,42 @@ const ContentWrapper = styled.div`
   padding: 0 200px;
 `;
 
+const LNBLi = styled.li`
+    color: ${props => props.active ? "#FF9900" : "#081435"};
+`;
+
 export default function Introduce() {
+  const [location, setLocation] = useState('main');
+
   return (
     <Base>
       <Title>소개</Title>
-      <LNB>
-        <li id="main">서문시장 야시장 소개</li>
-        <li id="time">운영시간</li>
-        <li id="way">오시는 길</li>
+      <LNB location={location} setLocation={setLocation}>
+        <LNBLi id="main" active={location === "main"}>서문시장 야시장 소개</LNBLi>
+        <LNBLi id="time" active={location === "time"}>운영시간</LNBLi>
+        <LNBLi id="way" active={location === "way"}>오시는 길</LNBLi>
       </LNB>
-      <Subtitle>서문시장 야시장 소개</Subtitle>
+      <Subtitle>
+      {
+          location === 'main' ? (
+            "서문시장 야시장 소개"
+          ) : location === 'time' ? (
+            "운영시간"
+          ) : (
+            "오시는 길"
+          )
+        }
+      </Subtitle>
       <ContentWrapper>
-        <IntroduceMain></IntroduceMain>
+        {
+          location === 'main' ? (
+            <IntroduceMain />
+          ) : location === 'time' ? (
+            <OperatingTime />
+          ) : (
+            <WayToCome />
+          )
+        }
       </ContentWrapper>
     </Base>
   );

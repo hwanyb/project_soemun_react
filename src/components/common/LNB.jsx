@@ -17,25 +17,17 @@ const NavList = styled.ul`
     line-height: 50px;
     &>li{
     max-width: 200px;
-    /* font-family: ${(props) => props.id === props.location ? 'PyeongChangPeace-Bold' : 'PyeongChangPeace-Light'}; */
     font-size: 18px;
-    color: #081435;
+    font-family: 'PyeongChangPeace-Light';
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     &:hover { 
         color: #FF9900;
-
     }
-    ${props => props.id === props.location ? css`
-        color: red;
-    ` : css`
-        color: aqua;
-    `}
     }
 `;
 
-export default function LNB({ children }) {
-  const [location, setLocation] = useState('main');
+export default function LNB({ children, location, setLocation }) {
     const onClick = (e) => {
         setLocation(e.target.id);
       }
@@ -44,7 +36,7 @@ export default function LNB({ children }) {
       }, [location])
   return (
     <Base>
-        <NavList onClick={(e) => onClick(e)} location={location}>{ children }</NavList>
+        <NavList onClick={(e) => onClick(e)}>{ children }</NavList>
     </Base>
   )
 }
