@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import AsideNav from './components/common/AsideNav';
 import Footer from './components/common/Footer';
 import Header from './components/common/Header';
+import SNB from './components/common/SNB';
 import ArtSchool from './pages/ArtSchool';
 import Food from './pages/Food';
 import Home from './pages/Home';
@@ -16,7 +16,7 @@ function App() {
       <GlobalStyle/>
       <BrowserRouter>
       <Header />
-      <AsideNav />
+      <SNB />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/introduce' element={<Introduce />} />

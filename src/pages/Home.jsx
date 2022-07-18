@@ -7,7 +7,6 @@ import { PyeongBold, PyeongLight } from "../style/Common";
 import Background from "../components/Background";
 import Cloud from "../components/Cloud";
 import Star from "../components/Star";
-import AsideNav from "../components/common/AsideNav";
 
 const HomeMain = styled.main`
   position: relative;
@@ -219,12 +218,11 @@ export default function Home() {
         >
           {swiperImgArr.map((img) => (
             <StyledSlide key={img.id}>
-              <img src={img.url} />
+              <img src={img.url} alt="전경 사진" />
             </StyledSlide>
           ))}
         </StyledSwiper>
       </Section2>
-      <AsideNav />
     </HomeMain>
   );
 }

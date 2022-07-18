@@ -15,12 +15,14 @@ const Base = styled.header`
   top: 0;
   padding: 0 200px;
   align-items: center;
+  box-shadow: 1px 1px 5px #0814352f;;
+
 `;
 const StyledLink = styled(Link)`
     text-decoration: none;
     box-sizing: border-box;
 `;
-const HeaderNav = styled.nav`
+const GNB = styled.nav`
     display: flex;
 `;
 const LogoTitle = styled(PyeongBold)`
@@ -29,7 +31,7 @@ const LogoTitle = styled(PyeongBold)`
 `;
 const NavItem = styled(PyeongLight)`
     color: #081435;
-    font-size: 14px;
+    font-size: 18px;
     margin-left: 30px;
     transition: all 0.2s ease-in-out;
     &:hover{
@@ -41,10 +43,9 @@ export default function Header() {
   return (
     <Base>
         <StyledLink to="/">
-          {/* <LogoImg src="https://hwanyb.github.io/project_seomun/img/Artboard%203.png" alt="header_logo" /> */}
           <LogoTitle>서문시장 야시장</LogoTitle>
         </StyledLink>
-      <HeaderNav>
+      <GNB>
         <StyledLink to="/introduce">
           <NavItem>소개</NavItem>
         </StyledLink>
@@ -57,7 +58,7 @@ export default function Header() {
         <StyledLink to="notice">
           <NavItem>공지사항</NavItem>
         </StyledLink>
-      </HeaderNav>
+      </GNB>
     </Base>
   );
 }

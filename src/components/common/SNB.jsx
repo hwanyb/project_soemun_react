@@ -25,7 +25,7 @@ const ItemText = styled(Noto300)`
     color: #081435;
 `;
 
-export default function AsideNav() {
+export default function SNB() {
   return (
     <Base>
         <NavItem to='/'>
