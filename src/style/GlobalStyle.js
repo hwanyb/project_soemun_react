@@ -36,6 +36,10 @@ a {
     text-decoration: none;
     display: block;
 }
+
+.flex {
+    display: flex;
+}
 `;
 
 export default GlobalStyle;

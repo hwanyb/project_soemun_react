@@ -34,8 +34,4 @@ export const Icon = styled.span`
     font-size: 35px;
     border-radius: 50%;
     transition: all 0.2s ease-in-out;
-    &:hover{
-        background-color: #081435;
-        color: #ffc806;
-    }
 `;
