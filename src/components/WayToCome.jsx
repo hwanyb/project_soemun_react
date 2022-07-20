@@ -1,18 +1,18 @@
 import React from "react";
-import styled from "styled-components";
-import { subwayArr } from "../assets/data";
+import styled, { css } from "styled-components";
+import { busArr, subwayArr } from "../assets/data";
 import { Icon, Noto300, Noto500, Noto700 } from "../style/Common";
 import Map from "./Map";
 
 const Base = styled.div`
-  width: 100%;
+  /* width: 100%; */
   padding-bottom: 100px;
 `;
 const MapWrppaer = styled.div`
   margin-bottom: 30px;
 `;
 const InfoWrapper = styled.div`
-  width: 100%;
+  /* width: 100%; */
   margin: 0 auto;
   border-top: 1px solid #ffc806;
   border-bottom: 1px solid #ffc806;
@@ -22,6 +22,7 @@ const MainInfo = styled.div`
   border-bottom: 1px solid #ffc806;
   margin-bottom: 20px;
   padding-bottom: 20px;
+  justify-content: center;
 `;
 const InfoTitleWrapper = styled.div`
   margin-right: 20px;
@@ -31,6 +32,7 @@ const TitleIcon = styled(Icon)`
   margin-right: 10px;
 `;
 const InfoTitle = styled(Noto700)`
+  justify-content: center;
   display: flex;
   line-height: 30px;
   color: #081435;
@@ -38,6 +40,7 @@ const InfoTitle = styled(Noto700)`
   margin-bottom: 10px;
 `;
 const InfoTextWapper = styled.div`
+  justify-content: center;
 `;
 const InfoText = styled(Noto500)`
   text-align: left;
@@ -45,9 +48,12 @@ const InfoText = styled(Noto500)`
   line-height: 30px;
   font-size: 18px;
   margin-bottom: 10px;
+
 `;
-const SubwayInfo = styled.div``;
-const SubwayWapper = styled.a`
+const TransportInfo = styled.div`
+  margin: 0 auto;
+`;
+const TransportWapper = styled.a`
   display: flex;
   align-items: center;
   margin-right: 10px;
@@ -66,6 +72,7 @@ const SubwayWapper = styled.a`
     color: #ff9900;
     transition: all 0.2s ease-in-out;
   }
+  
 `;
 const SubwayLine = styled(Noto300)`
   line-height: 16px;
@@ -78,8 +85,6 @@ const SubwayLine = styled(Noto300)`
   margin-right: 5px;
   margin-bottom: 10px;
 `;
-const BusInfo = styled.div``;
-
 export default function WayToCome() {
   return (
     <Base>
@@ -105,7 +110,7 @@ export default function WayToCome() {
             <InfoText>053-256-6341</InfoText>
           </InfoTextWapper>
         </MainInfo>
-        <SubwayInfo>
+        <TransportInfo>
           <InfoTitle>
             <TitleIcon className="material-symbols-rounded">
               directions_subway
@@ -114,21 +119,31 @@ export default function WayToCome() {
           </InfoTitle>
           <InfoTextWapper className="flex">
             {subwayArr.map((subway, index) => (
-              <SubwayWapper key={index} className="flex" target="_blank" href={`https://map.kakao.com/?subwayId=${subway.subwayId}&from=roughmap`}>
+              <TransportWapper
+                key={index}
+                className="flex subway"
+                target="_blank"
+                href={`https://map.kakao.com/?subwayId=${subway.subwayId}&from=roughmap`}
+              >
                 <SubwayLine id={subway.line}>{subway.line}</SubwayLine>
                 <InfoText>{subway.name}</InfoText>
-              </SubwayWapper>
+              </TransportWapper>
             ))}
           </InfoTextWapper>
-        </SubwayInfo>
-        <BusInfo>
           <InfoTitle>
             <TitleIcon className="material-symbols-rounded">
               directions_bus
             </TitleIcon>
             주변 정류장
           </InfoTitle>
-        </BusInfo>
+          <InfoTextWapper className="flex">
+            {busArr.map((bus, index) => (
+              <TransportWapper key={index} href={bus.url} target="_blank">
+                <InfoText>{bus.name}</InfoText>
+              </TransportWapper>
+            ))}
+          </InfoTextWapper>
+        </TransportInfo>
       </InfoWrapper>
     </Base>
   );
