@@ -175,7 +175,7 @@ export default function FoodContent() {
   const onCloseModalClick = () => {
     setShowModal(false);
     document.body.style.overflowY = "scroll";
-  }
+  };
   return (
     <Base>
       <FilterWrapper onClick={(e) => onFilterClick(e)}>
@@ -226,7 +226,12 @@ export default function FoodContent() {
       </FoodList>
       {showModal && (
         <MapModal currentScrollTop={currentScrollTop}>
-          <CloseBtn className="material-symbols-rounded" onClick={onCloseModalClick}>close</CloseBtn>
+          <CloseBtn
+            className="material-symbols-rounded"
+            onClick={onCloseModalClick}
+          >
+            close
+          </CloseBtn>
           <Map name={selectedLocation} />
         </MapModal>
       )}
