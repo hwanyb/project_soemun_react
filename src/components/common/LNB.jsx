@@ -31,9 +31,6 @@ export default function LNB({ children, location, setLocation }) {
   const onClick = (e) => {
     setLocation(e.target.id);
   };
-  useEffect(() => {
-    console.log(location);
-  }, [location]);
   return (
     <Base>
       <NavList onClick={(e) => onClick(e)}>{children}</NavList>

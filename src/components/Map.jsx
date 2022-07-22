@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import { mapArr } from "../assets/data";
 const Base = styled.div`
   width: 100%;
   position: relative;
@@ -48,14 +49,16 @@ const Button = styled.a`
     background-color: #ffffff;
   }
 `;
-export default function Map() {
+export default function Map(props) {
+  const [mapInfo, setMapInfo] = useState({});
+  useEffect(() => {
+    let mapObj = mapArr.filter((v) => v.name === props.name);
+    setMapInfo(mapObj[0]);
+  }, []);
   return (
     <Base>
-      <MapImgWapper
-        href="https://map.kakao.com/?urlX=856924.0&amp;urlY=661633.0&amp;itemId=27464044&amp;q=%EC%84%9C%EB%AC%B8%EC%8B%9C%EC%9E%A5&amp;srcid=27464044&amp;map_type=TYPE_MAP&amp;from=roughmap"
-        target="_blank"
-      >
-        <MapImg src="http://t1.daumcdn.net/roughmap/imgmap/5ad6254ae2eb392104baa4aac20dffb52266548f565faf2dedf5a9ca0544a454" />
+      <MapImgWapper href={mapInfo.mapUrl} target="_blank">
+        <MapImg src={mapInfo.mapImgUrl} />
       </MapImgWapper>
       <KakaoMapInfoWrapper>
         <KakaoMapLogo href="https://map.kakao.com" target="_blank">
@@ -67,22 +70,13 @@ export default function Map() {
           />
         </KakaoMapLogo>
         <ButtonWrapper>
-          <Button
-            target="_blank"
-            href="https://map.kakao.com/?from=roughmap&amp;srcid=27464044&amp;confirmid=27464044&amp;q=%EC%84%9C%EB%AC%B8%EC%8B%9C%EC%9E%A5&amp;rv=on"
-          >
+          <Button target="_blank" href={mapInfo.loadViewUrl}>
             로드뷰
           </Button>
-          <Button
-            target="_blank"
-            href="https://map.kakao.com/?from=roughmap&amp;eName=%EC%84%9C%EB%AC%B8%EC%8B%9C%EC%9E%A5&amp;eX=856924.0&amp;eY=661633.0"
-          >
+          <Button target="_blank" href={mapInfo.loadViewUrl}>
             길찾기
           </Button>
-          <Button
-            target="_blank"
-            href="https://map.kakao.com?map_type=TYPE_MAP&amp;from=roughmap&amp;srcid=27464044&amp;itemId=27464044&amp;q=%EC%84%9C%EB%AC%B8%EC%8B%9C%EC%9E%A5&amp;urlX=856924.0&amp;urlY=661633.0"
-          >
+          <Button target="_blank" href={mapInfo.mapUrl}>
             지도 크게 보기
           </Button>
         </ButtonWrapper>

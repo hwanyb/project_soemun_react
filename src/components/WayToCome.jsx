@@ -89,7 +89,7 @@ export default function WayToCome() {
   return (
     <Base>
       <MapWrppaer>
-        <Map />
+        <Map name="서문시장" />
       </MapWrppaer>
       <InfoWrapper>
         <MainInfo className="flex">

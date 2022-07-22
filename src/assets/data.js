@@ -204,3 +204,28 @@ export const foodArr = [
         ]
     },
   ];
+
+
+  export const mapArr = [
+    {
+        name: "서문시장",
+        mapUrl: "https://map.kakao.com?map_type=TYPE_MAP&amp;from=roughmap&amp;srcid=27464044&amp;itemId=27464044&amp;q=%EC%84%9C%EB%AC%B8%EC%8B%9C%EC%9E%A5&amp;urlX=856924.0&amp;urlY=661633.0",
+        mapImgUrl: "http://t1.daumcdn.net/roughmap/imgmap/5ad6254ae2eb392104baa4aac20dffb52266548f565faf2dedf5a9ca0544a454",
+        loadViewUrl: "http://kko.to/PgZmBEDTGA",
+        naviUrl: "https://map.kakao.com/?from=roughmap&amp;eName=%EC%84%9C%EB%AC%B8%EC%8B%9C%EC%9E%A5&amp;eX=856924.0&amp;eY=661633.0",
+    },
+    {
+        name: "동산상가",
+        mapUrl: "https://map.kakao.com/?urlX=857129.0&amp;urlY=661636.0&amp;itemId=10296066&amp;q=%EB%8F%99%EC%82%B0%EC%83%81%EA%B0%80&amp;srcid=10296066&amp;map_type=TYPE_MAP&amp;from=roughmap",
+        mapImgUrl: "http://t1.daumcdn.net/roughmap/imgmap/1d607f7693aa2ee46602b7e6d96e08b6f676097050db9f586086453af216be82",
+        loadViewUrl: "http://kko.to/vpr3AX1a-A",
+        naviUrl: "https://map.kakao.com/?from=roughmap&amp;eName=%EB%8F%99%EC%82%B0%EC%83%81%EA%B0%80&amp;eX=857129.0&amp;eY=661636.0"
+    },
+    {
+        name: "대신",
+        mapUrl: "https://map.kakao.com/?urlX=856899.0&amp;urlY=661609.0&amp;itemId=7824276&amp;q=%EB%8C%80%EC%8B%A0119%EC%95%88%EC%A0%84%EC%84%BC%ED%84%B0&amp;srcid=7824276&amp;map_type=TYPE_MAP&amp;from=roughmap",
+        mapImgUrl: "http://t1.daumcdn.net/roughmap/imgmap/7872e8e008f7fd86892ee9af764816346268616cc71d4b76d66ae5a58dc5c8f5",
+        loadViewUrl: "http://kko.to/P74am_0sH_",
+        naviUrl:"https://map.kakao.com/?from=roughmap&amp;eName=%EB%8C%80%EC%8B%A0119%EC%95%88%EC%A0%84%EC%84%BC%ED%84%B0&amp;eX=856899.0&amp;eY=661609.0"
+    }
+  ];
