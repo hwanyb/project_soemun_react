@@ -130,8 +130,13 @@ export default function FoodContent() {
   const tagArr = foodArr.map((food) => food.tag);
   const onFilterClick = (e) => {
     const selectedTag = e.target.innerHTML;
-    const filteredArr = foodArr.filter((tag) => tag.tag === selectedTag);
-    setFoodList(filteredArr);
+    if (selectedTag === "전체") {
+      let filteredArr = [...foodArr];
+      setFoodList(filteredArr);
+    } else {
+      let filteredArr = foodArr.filter((tag) => tag.tag === selectedTag);
+      setFoodList(filteredArr);
+    }
   };
   return (
     <Base>
