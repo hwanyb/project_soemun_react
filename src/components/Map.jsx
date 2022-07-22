@@ -73,9 +73,6 @@ export default function Map(props) {
           <Button target="_blank" href={mapInfo.loadViewUrl}>
             로드뷰
           </Button>
-          <Button target="_blank" href={mapInfo.loadViewUrl}>
-            길찾기
-          </Button>
           <Button target="_blank" href={mapInfo.mapUrl}>
             지도 크게 보기
           </Button>
