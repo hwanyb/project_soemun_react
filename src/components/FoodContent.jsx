@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import Masonry from "react-masonry-css";
 
 import { Icon, Noto300, Noto500, Noto700, PyeongBold } from "../style/Common";
 import { foodArr } from "../assets/data";
+import Map from "./Map";
 
 const Base = styled.div`
   padding: 0 200px;
@@ -125,8 +126,35 @@ const LocationText = styled(Noto700)`
   font-size: 14px;
   color: #081435;
 `;
+
+const MapModal = styled.div`
+  position: absolute;
+  top: ${(props) => `${props.currentScrollTop}px`};
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #081435a0;
+  padding: 200px;
+  backdrop-filter: blur(5px);
+`;
+const CloseBtn = styled(Icon)`
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 50px;
+  cursor: pointer;
+  color: #ffc806;
+  &:hover {
+    transform: rotate(90deg);
+    color: #ff9900;
+  }
+`;
 export default function FoodContent() {
   const [foodList, setFoodList] = useState([...foodArr]);
+  const [selectedLocation, setSelectedLocation] = useState("");
+  const [showModal, setShowModal] = useState(false);
+  const [currentScrollTop, setCurrentScrollTop] = useState(0);
+
   const tagArr = foodArr.map((food) => food.tag);
   const onFilterClick = (e) => {
     const selectedTag = e.target.innerHTML;
@@ -138,6 +166,16 @@ export default function FoodContent() {
       setFoodList(filteredArr);
     }
   };
+  const onLocationClick = (e) => {
+    setShowModal(true);
+    setSelectedLocation(e.target.id);
+    setCurrentScrollTop(window.scrollY);
+    document.body.style.overflowY = "hidden";
+  };
+  const onCloseModalClick = () => {
+    setShowModal(false);
+    document.body.style.overflowY = "scroll";
+  }
   return (
     <Base>
       <FilterWrapper onClick={(e) => onFilterClick(e)}>
@@ -176,11 +214,22 @@ export default function FoodContent() {
               <LocationIcon className="material-symbols-rounded">
                 location_on
               </LocationIcon>
-              <LocationText>매대 위치보기</LocationText>
+              <LocationText
+                onClick={(e) => onLocationClick(e)}
+                id={food.location}
+              >
+                매대 위치보기
+              </LocationText>
             </LocationWrapper>
           </FoodItem>
         ))}
       </FoodList>
+      {showModal && (
+        <MapModal currentScrollTop={currentScrollTop}>
+          <CloseBtn className="material-symbols-rounded" onClick={onCloseModalClick}>close</CloseBtn>
+          <Map name={selectedLocation} />
+        </MapModal>
+      )}
     </Base>
   );
 }
