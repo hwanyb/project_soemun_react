@@ -5,46 +5,36 @@ import {
   ScrollPage,
   batch,
   Fade,
-  FadeIn,
-  FadeOut,
-  Move,
   MoveIn,
   MoveOut,
-  Sticky,
-  StickyIn,
-  StickyOut,
-  Zoom,
-  ZoomIn,
-  ZoomOut,
 } from "react-scroll-motion";
 import styled from "styled-components";
 import { Noto300, PyeongBold, PyeongLight } from "../style/Common";
-const Base = styled(ScrollContainer)`
+
+export const Base = styled(ScrollContainer)`
   width: 100%;
   text-align: center;
 `;
-const StyledScrollPage = styled(ScrollPage)`
-`;
-const IntroWrapper = styled.div`
+export const IntroWrapper = styled.div`
   margin-bottom: 200px;
 `;
-const SubHeading = styled(PyeongBold)`
+export const SubHeading = styled(PyeongBold)`
   font-size: 20px;
   color: #ff9900;
 `;
-const Desc = styled(PyeongLight)`
+export const Desc = styled(PyeongLight)`
   font-size: 14px;
   color: #081435;
   margin-top: 10px;
 `;
-const IntroImg = styled.img`
+export const IntroImg = styled.img`
   width: 100%;
   height: 400px;
   object-fit: cover;
   border-radius: 20px;
   margin: 100px 0;
 `;
-const IntroTitle = styled(PyeongBold)`
+export const IntroTitle = styled(PyeongBold)`
   background-color: #081435;
   color: #ffc806;
   width: fit-content;
@@ -54,7 +44,7 @@ const IntroTitle = styled(PyeongBold)`
   font-size: 30px;
 `;
 
-const IntroText = styled(Noto300)`
+export const IntroText = styled(Noto300)`
   color: #081435;
   font-size: 18px;
   margin-top: 50px;
@@ -68,7 +58,7 @@ export default function IntroduceMain() {
         <Desc>여러분과 함께 만들어가는 夜한 테마파크!</Desc>
       </IntroWrapper>
       <Base>
-        <StyledScrollPage>
+        <ScrollPage>
           <Animator
             animation={batch(MoveIn(0, -500), MoveOut(0, -500), Fade())}
           >
@@ -82,8 +72,8 @@ export default function IntroduceMain() {
               저녁, 시민과 관광객에게 즐거움을 선사하는 복합문화공간입니다.
             </IntroText>
           </Animator>
-        </StyledScrollPage>
-        <StyledScrollPage>
+        </ScrollPage>
+        <ScrollPage>
           <Animator
             animation={batch(MoveIn(0, -500), MoveOut(0, -500), Fade())}
           >
@@ -98,8 +88,8 @@ export default function IntroduceMain() {
               예정입니다.
             </IntroText>
           </Animator>
-        </StyledScrollPage>
-        <StyledScrollPage>
+        </ScrollPage>
+        <ScrollPage>
           <Animator
             animation={batch(MoveIn(-200, 0), MoveOut(0, -500), Fade())}
           >
@@ -113,8 +103,8 @@ export default function IntroduceMain() {
               즐비합니다.
             </IntroText>
           </Animator>
-        </StyledScrollPage>
-        <StyledScrollPage>
+        </ScrollPage>
+        <ScrollPage>
           <Animator
             animation={batch(MoveIn(0, -500), MoveOut(0, -500), Fade())}
           >
@@ -132,7 +122,7 @@ export default function IntroduceMain() {
               수 있는 ‘획기적인’ 모델을 제시하고 있습니다.
             </IntroText>
           </Animator>
-        </StyledScrollPage>
+        </ScrollPage>
       </Base>
     </>
   );
