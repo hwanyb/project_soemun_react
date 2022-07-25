@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { noticeArr } from "../assets/data";
 
 import Title from "../components/common/Title";
+import Subtitle from "../components/common/Subtitle";
 import NoticeDetail from "../components/Notice/NoticeDetail";
 import NoticeList from "../components/Notice/NoticeList";
 import NoticeWriting from "../components/Notice/NoticeWriting";
@@ -27,6 +27,14 @@ export default function Notice() {
   return (
     <Base>
       <Title>공지사항</Title>
+      <Subtitle>
+        {isWriting
+          ? "공지 작성"
+          : selectedPost !== null
+          ? "공지 글보기"
+          : "공지 목록"}
+      </Subtitle>
+
       {isWriting ? (
         <NoticeWriting
           setIsWriting={setIsWriting}
