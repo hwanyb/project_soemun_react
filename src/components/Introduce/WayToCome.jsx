@@ -1,8 +1,8 @@
 import React from "react";
 import styled, { css } from "styled-components";
-import { busArr, subwayArr } from "../assets/data";
-import { Icon, Noto300, Noto500, Noto700 } from "../style/Common";
-import Map from "./Map";
+import { busArr, subwayArr } from "../../assets/data";
+import { Icon, Noto300, Noto500, Noto700 } from "../../style/Common";
+import Map from "../common/Map";
 
 const Base = styled.div`
   /* width: 100%; */

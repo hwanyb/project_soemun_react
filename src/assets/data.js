@@ -1,3 +1,66 @@
+export const HomeImgArr = [
+    {
+      id: 1,
+      url: "https://github.com/hwanyb/project_seomun/blob/master/img/sec4_img01.jpg?raw=true",
+    },
+    {
+      id: 2,
+      url: "https://github.com/hwanyb/project_seomun/blob/master/img/sec4_img02.jpg?raw=true",
+    },
+    {
+      id: 3,
+      url: "https://github.com/hwanyb/project_seomun/blob/master/img/sec4_img03.jpg?raw=true",
+    },
+    {
+      id: 4,
+      url: "https://github.com/hwanyb/project_seomun/blob/master/img/sec4_img04.jpg?raw=true",
+    },
+    {
+      id: 5,
+      url: "https://github.com/hwanyb/project_seomun/blob/master/img/sec4_img05.jpg?raw=true",
+    },
+    {
+      id: 6,
+      url: "https://github.com/hwanyb/project_seomun/blob/master/img/sec4_img06.jpg?raw=true",
+    },
+    {
+      id: 7,
+      url: "https://github.com/hwanyb/project_seomun/blob/master/img/sec4_img07.jpg?raw=true",
+    },
+    {
+      id: 8,
+      url: "https://github.com/hwanyb/project_seomun/blob/master/img/sec4_img08.jpg?raw=true",
+    },
+    {
+      id: 9,
+      url: "https://github.com/hwanyb/project_seomun/blob/master/img/sec4_img09.jpg?raw=true",
+    },
+    {
+      id: 10,
+      url: "https://github.com/hwanyb/project_seomun/blob/master/img/shrimp.jpg?raw=true",
+    },
+    {
+      id: 11,
+      url: "https://github.com/hwanyb/project_seomun/blob/master/img/tangsu.jpg?raw=true",
+    },
+    {
+      id: 12,
+      url: "https://github.com/hwanyb/project_seomun/blob/master/img/ttoeokbok.jpg?raw=true",
+    },
+    {
+      id: 13,
+      url: "https://github.com/hwanyb/project_seomun/blob/master/img/gogi.jpg?raw=true",
+    },
+    {
+      id: 14,
+      url: "https://github.com/hwanyb/project_seomun/blob/master/img/kabe.jpg?raw=true",
+    },
+    {
+      id: 15,
+      url: "https://github.com/hwanyb/project_seomun/blob/master/img/kkochi.jpg?raw=true",
+    },
+  ];
+
 export const subwayArr = [
     {
         name: "서문시장역",

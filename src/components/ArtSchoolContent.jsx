@@ -15,7 +15,7 @@ import {
   IntroTitle,
   IntroWrapper,
   SubHeading,
-} from "./IntroduceMain";
+} from "./Introduce/IntroduceMain";
 
 export default function ArtSchoolContent() {
   const animation = batch(MoveIn(0, -500), MoveOut(0, -500));

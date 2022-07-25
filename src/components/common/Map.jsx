@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { mapArr } from "../assets/data";
+import { mapArr } from "../../assets/data";
 const Base = styled.div`
   width: 100%;
   position: relative;

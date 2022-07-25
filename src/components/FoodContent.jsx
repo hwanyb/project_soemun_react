@@ -1,10 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Masonry from "react-masonry-css";
 
 import { Icon, Noto300, Noto500, Noto700, PyeongBold } from "../style/Common";
 import { foodArr } from "../assets/data";
-import Map from "./Map";
+import Map from "./common/Map";
 
 const Base = styled.div`
   padding: 0 200px;

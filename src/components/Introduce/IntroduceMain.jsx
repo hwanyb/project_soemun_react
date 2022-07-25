@@ -9,7 +9,7 @@ import {
   MoveOut,
 } from "react-scroll-motion";
 import styled from "styled-components";
-import { Noto300, PyeongBold, PyeongLight } from "../style/Common";
+import { Noto300, PyeongBold, PyeongLight } from "../../style/Common";
 
 export const Base = styled(ScrollContainer)`
   width: 100%;

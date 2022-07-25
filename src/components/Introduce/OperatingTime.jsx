@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Noto700, Noto900, PyeongBold } from "../style/Common";
+import { Noto700, Noto900, PyeongBold } from "../../style/Common";
 
 const Base = styled.div`
   padding-bottom: 100px;

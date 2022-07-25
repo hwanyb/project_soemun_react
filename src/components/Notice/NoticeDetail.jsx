@@ -1,5 +1,5 @@
 import React from "react";
-import SubTitle from './common/Subtitle';
+import SubTitle from '../common/Subtitle';
 
 export default function NoticeDetail({ selectedPost, setSelectedPost }) {
   const onListClick = () => {

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { PyeongBold, PyeongLight } from "../../style/Common";
-import Background from "../Background";
+import Background from "./Background";
 
 const Base = styled.div`
   width: 100%;

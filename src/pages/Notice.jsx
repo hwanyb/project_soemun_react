@@ -3,9 +3,9 @@ import styled from "styled-components";
 import { noticeArr } from "../assets/data";
 
 import Title from "../components/common/Title";
-import NoticeDetail from "../components/NoticeDetail";
-import NoticeList from "../components/NoticeList";
-import NoticeWriting from "../components/NoticeWriting";
+import NoticeDetail from "../components/Notice/NoticeDetail";
+import NoticeList from "../components/Notice/NoticeList";
+import NoticeWriting from "../components/Notice/NoticeWriting";
 
 const Base = styled.div`
   position: relative;

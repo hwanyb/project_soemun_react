@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 import styled from "styled-components";
-import ArtSchoolContent from '../components/ArtSchoolContent';
+import ArtSchoolContent from "../components/ArtSchoolContent";
 import Title from "../components/common/Title";
 
 const Base = styled.div`
@@ -19,5 +19,5 @@ export default function ArtSchool() {
         <ArtSchoolContent />
       </ContentWrapper>
     </Base>
-  )
+  );
 }

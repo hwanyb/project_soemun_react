@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Subtitle from "./common/Subtitle";
+import Subtitle from "../common/Subtitle";
 
 export default function NoticeWriting({
   setIsWriting,

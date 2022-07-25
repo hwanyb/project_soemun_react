@@ -1,12 +1,14 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper";
 import "swiper/css";
+import { Autoplay } from "swiper";
 import styled, { keyframes } from "styled-components";
+
+import { HomeImgArr } from "../assets/data";
 import { PyeongBold, PyeongLight } from "../style/Common";
-import Background from "../components/Background";
-import Cloud from "../components/Cloud";
-import Star from "../components/Star";
+import Background from "../components/common/Background";
+import Cloud from "../components/svg/Cloud";
+import Star from "../components/svg/Star";
 
 const HomeMain = styled.main`
   position: relative;
@@ -112,68 +114,6 @@ const StyledSlide = styled(SwiperSlide)`
   }
 `;
 export default function Home() {
-  const swiperImgArr = [
-    {
-      id: 1,
-      url: "https://github.com/hwanyb/project_seomun/blob/master/img/sec4_img01.jpg?raw=true",
-    },
-    {
-      id: 2,
-      url: "https://github.com/hwanyb/project_seomun/blob/master/img/sec4_img02.jpg?raw=true",
-    },
-    {
-      id: 3,
-      url: "https://github.com/hwanyb/project_seomun/blob/master/img/sec4_img03.jpg?raw=true",
-    },
-    {
-      id: 4,
-      url: "https://github.com/hwanyb/project_seomun/blob/master/img/sec4_img04.jpg?raw=true",
-    },
-    {
-      id: 5,
-      url: "https://github.com/hwanyb/project_seomun/blob/master/img/sec4_img05.jpg?raw=true",
-    },
-    {
-      id: 6,
-      url: "https://github.com/hwanyb/project_seomun/blob/master/img/sec4_img06.jpg?raw=true",
-    },
-    {
-      id: 7,
-      url: "https://github.com/hwanyb/project_seomun/blob/master/img/sec4_img07.jpg?raw=true",
-    },
-    {
-      id: 8,
-      url: "https://github.com/hwanyb/project_seomun/blob/master/img/sec4_img08.jpg?raw=true",
-    },
-    {
-      id: 9,
-      url: "https://github.com/hwanyb/project_seomun/blob/master/img/sec4_img09.jpg?raw=true",
-    },
-    {
-      id: 10,
-      url: "https://github.com/hwanyb/project_seomun/blob/master/img/shrimp.jpg?raw=true",
-    },
-    {
-      id: 11,
-      url: "https://github.com/hwanyb/project_seomun/blob/master/img/tangsu.jpg?raw=true",
-    },
-    {
-      id: 12,
-      url: "https://github.com/hwanyb/project_seomun/blob/master/img/ttoeokbok.jpg?raw=true",
-    },
-    {
-      id: 13,
-      url: "https://github.com/hwanyb/project_seomun/blob/master/img/gogi.jpg?raw=true",
-    },
-    {
-      id: 14,
-      url: "https://github.com/hwanyb/project_seomun/blob/master/img/kabe.jpg?raw=true",
-    },
-    {
-      id: 15,
-      url: "https://github.com/hwanyb/project_seomun/blob/master/img/kkochi.jpg?raw=true",
-    },
-  ];
   return (
     <HomeMain>
       <Section1>
@@ -216,7 +156,7 @@ export default function Home() {
           slidesPerGroup={3}
           loop={true}
         >
-          {swiperImgArr.map((img) => (
+          {HomeImgArr.map((img) => (
             <StyledSlide key={img.id}>
               <img src={img.url} alt="전경 사진" />
             </StyledSlide>
