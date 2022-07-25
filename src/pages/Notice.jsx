@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
 import Title from "../components/common/Title";
-import Subtitle from "../components/common/Subtitle";
-import NoticeDetail from "../components/Notice/NoticeDetail";
-import NoticeList from "../components/Notice/NoticeList";
-import NoticeWriting from "../components/Notice/NoticeWriting";
+// import NoticeDetail from "../components/Notice/NoticeDetail";
+// import NoticeList from "../components/Notice/NoticeList";
+// import NoticeWriting from "../components/Notice/NoticeWriting";
+import NoticeContent from "../components/Notice/NoticeContent";
 
 const Base = styled.div`
   position: relative;
@@ -14,49 +14,42 @@ const Base = styled.div`
 `;
 
 export default function Notice() {
-  const [selectedPost, setSelectedPost] = useState(null);
-  const [isWriting, setIsWriting] = useState(false);
-  const [noticeList, setNoticeList] = useState([]);
-
-  const getList = JSON.parse(localStorage.getItem("noticeArr"));
-  useEffect(() => {
-    setNoticeList(getList);
-    console.log(noticeList);
-  }, [isWriting]);
+  // const [isWriting, setIsWriting] = useState(false);
+  // const [isShowDetail, setIsShowDetail] = useState(false);
+  // const [noticeList, setNoticeList] = useState([]);
+  // const [selectedPost, setSelectedPost] = useState(null);
+  // const getList = JSON.parse(localStorage.getItem("noticeArr"));
+  // useEffect(() => {
+  //   setNoticeList(getList);
+  //   console.log(noticeList);
+  // }, [isWriting]);
+  // useEffect(() => {
+  //   console.log(selectedPost);
+  // });
 
   return (
     <Base>
       <Title>공지사항</Title>
-      <Subtitle>
-        {isWriting
-          ? "공지 작성"
-          : selectedPost !== null
-          ? "공지 글보기"
-          : "공지 목록"}
-      </Subtitle>
+      <NoticeContent />
 
-      {isWriting ? (
-        <NoticeWriting
-          setIsWriting={setIsWriting}
-          noticeList={noticeList}
-        />
+      {/* {isWriting ? (
+        <NoticeWriting setIsWriting={setIsWriting} noticeList={noticeList} />
       ) : selectedPost !== null ? (
         <>
-          <button onClick={() => setIsWriting(true)}>글 작성</button>
-          <NoticeDetail
-            selectedPost={selectedPost}
-            setSelectedPost={setSelectedPost}
-          />
+          <button onClick={onWriteClick}>글 작성</button>
+          <NoticeDetail selectedPost={selectedPost} onListClick={onListClick} />
         </>
       ) : (
-        <>
-          <button onClick={() => setIsWriting(true)}>글 작성</button>
-          <NoticeList
-            setSelectedPost={setSelectedPost}
-            noticeList={[...noticeList]}
-          />
-        </>
+        
       )}
+      {
+        mainView === "list" ? (
+          <>
+          <button onClick={onWriteClick}>글 작성</button>
+          <NoticeList noticeList={noticeList} onPostClick={onPostClick} />
+        </>
+        ): mainView ===
+      } */}
     </Base>
   );
 }

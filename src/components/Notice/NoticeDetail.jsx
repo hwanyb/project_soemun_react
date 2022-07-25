@@ -1,13 +1,9 @@
 import React from "react";
-import SubTitle from '../common/Subtitle';
 
-export default function NoticeDetail({ selectedPost, setSelectedPost }) {
-  const onListClick = () => {
-    setSelectedPost(null);
-  };
+export default function NoticeDetail({ selectedPost, setMainView }) {
   return (
     <>
-      <div onClick={onListClick}>목록</div>
+    <button onClick={() => setMainView('list')}>글 목록</button>
       <h1>{selectedPost.title}</h1>
       <p>{selectedPost.date}</p>
       <p style={{ whiteSpace: "pre" }}>{selectedPost.body}</p>

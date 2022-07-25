@@ -50,12 +50,12 @@ const FormBtn = styled.button`
     background-color: ${(props) => (props.disabled ? "#d9d9d9" : "#ff9900")};
   }
 `;
-export default function NoticeWriting({ setIsWriting, noticeList }) {
+export default function NoticeWriting({ setMainView, noticeList }) {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
 
   const onCancleClick = () => {
-    setIsWriting(false);
+    setMainView("list");
   };
 
   const onChange = (e) => {
@@ -78,7 +78,8 @@ export default function NoticeWriting({ setIsWriting, noticeList }) {
       date: formattedDate,
     });
     await localStorage.setItem("noticeArr", JSON.stringify(newNoticeList));
-    setIsWriting(false);
+    setMainView("list");
+
   };
   return (
     <FormWrapper>
