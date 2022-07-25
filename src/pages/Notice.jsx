@@ -39,7 +39,6 @@ export default function Notice() {
         <NoticeWriting
           setIsWriting={setIsWriting}
           noticeList={noticeList}
-          setNoticeList={setNoticeList}
         />
       ) : selectedPost !== null ? (
         <>

@@ -42,11 +42,6 @@ const IntroduceText = styled(PyeongBold)`
 const IntroBtn = styled.button`
   background-color: #ffc806;
   color: #081435;
-  padding: 3px 20px;
-  font-size: 14px;
-  font-weight: 500;
-  border-radius: 10px;
-  cursor: pointer;
 `;
 const textLoop = keyframes`
   0% {

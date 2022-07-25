@@ -1,14 +1,58 @@
 import React, { useState } from "react";
+import styled from "styled-components";
+import { Noto300 } from "../../style/Common";
 
-export default function NoticeWriting({
-  setIsWriting,
-  noticeList,
-  setNoticeList,
-}) {
+const FormWrapper = styled.div`
+  max-width: 1600px;
+  padding: 0 200px 100px 200px;
+  margin: 0 auto;
+`;
+const NoticeForm = styled.form`
+  width: 100%;
+  text-align: left;
+`;
+const Label = styled(Noto300)`
+  color: #081435;
+  font-size: 14px;
+  margin-bottom: 10px;
+`;
+const TitleInput = styled.input`
+  color: #081435;
+  font-size: 16px;
+  border: 1px solid #ffc806;
+  width: 100%;
+  padding: 5px 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+`;
+const BodyInput = styled.textarea`
+  color: #081435;
+  font-size: 16px;
+  border: 1px solid #ffc806;
+  width: 100%;
+  min-height: 200px;
+  padding: 5px 20px;
+  border-radius: 15px;
+  margin-bottom: 50px;
+`;
+const BtnWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+const FormBtn = styled.button`
+  background-color: ${(props) => (props.disabled ? "#d9d9d9" : "#ffc806")};
+  color: ${(props) => (props.disabled ? "#b1b1b1" : "#081435")};
+  transition: all 0.2s ease-in-out;
+  &:first-child {
+    margin-right: 20px;
+  }
+  &:hover {
+    background-color: ${(props) => (props.disabled ? "#d9d9d9" : "#ff9900")};
+  }
+`;
+export default function NoticeWriting({ setIsWriting, noticeList }) {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
-  const [postObj, setPostObj] = useState({});
-  // console.log(noticeList)
 
   const onCancleClick = () => {
     setIsWriting(false);
@@ -19,8 +63,6 @@ export default function NoticeWriting({
 
     if (name === "title") setTitle(value);
     else setBody(value);
-
-    console.log(title, body);
   };
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -35,27 +77,28 @@ export default function NoticeWriting({
       body: body,
       date: formattedDate,
     });
-    console.log(newNoticeList);
     await localStorage.setItem("noticeArr", JSON.stringify(newNoticeList));
     setIsWriting(false);
   };
   return (
-    <div>
-      <form onSubmit={(e) => onSubmit(e)}>
-        <label>제목</label>
-        <input
+    <FormWrapper>
+      <NoticeForm onSubmit={(e) => onSubmit(e)}>
+        <Label>제목</Label>
+        <TitleInput
           name="title"
           type="text"
           placeholder="제목을 입력해 주세요."
           onChange={onChange}
         />
-        <label>내용</label>
-        <textarea onChange={(e) => onChange(e)} name="body" />
-        <button type="submit" disabled={title.length < 1 || body.length < 1}>
-          저장
-        </button>
-        <button onClick={onCancleClick}>취소</button>
-      </form>
-    </div>
+        <Label>내용</Label>
+        <BodyInput onChange={(e) => onChange(e)} name="body" />
+        <BtnWrapper>
+          <FormBtn type="submit" disabled={title.length < 1 || body.length < 1}>
+            저장
+          </FormBtn>
+          <FormBtn onClick={onCancleClick}>취소</FormBtn>
+        </BtnWrapper>
+      </NoticeForm>
+    </FormWrapper>
   );
 }

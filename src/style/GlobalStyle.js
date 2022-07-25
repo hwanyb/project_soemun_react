@@ -31,12 +31,30 @@ button {
     outline: none;
     background-color: transparent;
     font-family: 'Noto Sans KR', sans-serif;
+    padding: 3px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 10px;
+    cursor: pointer;
 }
 a {
     text-decoration: none;
     display: block;
 }
+input {
+    border: none;
+    outline: none;
+    font-family: 'Noto Sans KR', sans-serif;
+    display: block;
+}
+textarea {
+    border: none;
+    outline: none;
+    font-family: 'Noto Sans KR', sans-serif;
+    resize: none;
+    display: block;
 
+}
 .flex {
     display: flex;
 }
