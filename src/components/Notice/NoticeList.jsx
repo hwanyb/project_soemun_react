@@ -2,11 +2,6 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { Noto300, Noto700 } from "../../style/Common";
 
-const ListWrapper = styled.ul`
-  max-width: 1600px;
-  padding: 0 200px 100px 200px;
-  margin: 0 auto;
-`;
 const ListItem = styled.li`
   padding: 0 50px;
   display: grid;
@@ -19,7 +14,7 @@ const ListItem = styled.li`
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   &:hover {
-    background-color: #ffc90686;
+    background-color: #ffc90665;
   }
 `;
 const ItemIndex = styled(Noto300)``;
@@ -39,7 +34,7 @@ export default function NoticeList({
     setMainView("detail");
   };
   return (
-    <ListWrapper>
+    <>
       {noticeList.map((post, index) => (
         <ListItem key={index} onClick={(e) => onPostClick(e, post)}>
           <ItemIndex>{index + 1}</ItemIndex>
@@ -47,6 +42,6 @@ export default function NoticeList({
           <ItemDate>{post.date}</ItemDate>
         </ListItem>
       ))}
-    </ListWrapper>
+    </>
   );
 }

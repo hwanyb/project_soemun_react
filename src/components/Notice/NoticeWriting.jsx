@@ -2,11 +2,6 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { Noto300 } from "../../style/Common";
 
-const FormWrapper = styled.div`
-  max-width: 1600px;
-  padding: 0 200px 100px 200px;
-  margin: 0 auto;
-`;
 const NoticeForm = styled.form`
   width: 100%;
   text-align: left;
@@ -82,7 +77,6 @@ export default function NoticeWriting({ setMainView, noticeList }) {
 
   };
   return (
-    <FormWrapper>
       <NoticeForm onSubmit={(e) => onSubmit(e)}>
         <Label>제목</Label>
         <TitleInput
@@ -100,6 +94,5 @@ export default function NoticeWriting({ setMainView, noticeList }) {
           <FormBtn onClick={onCancleClick}>취소</FormBtn>
         </BtnWrapper>
       </NoticeForm>
-    </FormWrapper>
   );
 }

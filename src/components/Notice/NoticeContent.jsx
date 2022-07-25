@@ -4,17 +4,23 @@ import NoticeList from "./NoticeList";
 import NoticeWriting from "./NoticeWriting";
 import Subtitle from "../common/Subtitle";
 import NoticeDetail from './NoticeDetail';
+import styled from 'styled-components';
 
+const Base = styled.div`
+
+max-width: 1600px;
+  padding: 0 200px 150px 200px;
+  margin: 0 auto;
+`;
 export default function NoticeContent() {
   const getList = JSON.parse(localStorage.getItem("noticeArr"));
-  const [mainView, setMainView] = useState('');
+  const [mainView, setMainView] = useState('list');
   const [noticeList, setNoticeList] = useState(getList);
   const [selectedPost, setSelectedPost] = useState(null);
   
   useEffect(() => {
-    setMainView('list');
-  }, [])
-    console.log(mainView);
+    setNoticeList(getList);
+  }, [mainView]);
 
   const onWriteClick = () => {
     setMainView("writing");
@@ -40,6 +46,7 @@ export default function NoticeContent() {
             return (
               <>
                 <Subtitle>공지사항 목록</Subtitle>
+                <WritingBtn />
                 <NoticeList noticeList={noticeList} setSelectedPost={setSelectedPost} setMainView={setMainView}  />
               </>
             );
@@ -56,6 +63,7 @@ export default function NoticeContent() {
               <>
                 <Subtitle>공지사항 글 확인</Subtitle>
                 <ListBtn />
+                <WritingBtn />
                 <NoticeDetail selectedPost={selectedPost} setMainView={setMainView} />
               </>
             );
@@ -64,8 +72,8 @@ export default function NoticeContent() {
     }
   }
 return (
-    <>
-        <Content></Content>
-    </>
+    <Base>
+        <Content />
+    </Base>
 );
 }
