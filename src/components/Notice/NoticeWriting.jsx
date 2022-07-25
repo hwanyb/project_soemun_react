@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Subtitle from "../common/Subtitle";
 
 export default function NoticeWriting({
   setIsWriting,
@@ -42,7 +41,6 @@ export default function NoticeWriting({
   };
   return (
     <div>
-      <Subtitle>글 작성</Subtitle>
       <form onSubmit={(e) => onSubmit(e)}>
         <label>제목</label>
         <input
