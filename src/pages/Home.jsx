@@ -5,14 +5,7 @@ import { Autoplay } from "swiper";
 import styled, { keyframes } from "styled-components";
 
 import { foodArr, HomeImgArr } from "../assets/data";
-import {
-  Icon,
-  Noto300,
-  Noto500,
-  Noto700,
-  PyeongBold,
-  PyeongLight,
-} from "../style/Common";
+import { Noto300, Noto700, PyeongBold, PyeongLight } from "../style/Common";
 import Background from "../components/common/Background";
 import Cloud from "../components/svg/Cloud";
 import Star from "../components/svg/Star";
@@ -22,6 +15,7 @@ const HomeMain = styled.main`
   position: relative;
   top: 70px;
   width: 100%;
+  padding-bottom: 100px;
 `;
 const Section1 = styled.section`
   width: 100%;
@@ -133,12 +127,11 @@ const FoodContainer = styled.div`
     height: 3px;
     background-color: #ffc806;
     border-radius: 5px;
-}
+  }
 `;
 const FoodList = styled.ul`
   display: flex;
   width: fit-content;
-  
 `;
 const FoodItem = styled.div`
   min-width: 400px;
@@ -215,21 +208,61 @@ export default function Home() {
       <ShortcutContainer>
         <ShortcutWapper className="shortcut-wrapper">
           <Cloud />
-          <StyledA href="https://www.somunnanshop.com/index.php/home" target="_blank">야시장 음식 스마트폰으로 주문하기</StyledA>
+          <StyledA
+            href="https://www.somunnanshop.com/index.php/home"
+            target="_blank"
+          >
+            야시장 음식 스마트폰으로 주문하기
+          </StyledA>
           <Star />
-          <StyledA href="https://mmp7.cafe24.com/storymap/daeguyasijang.html" target="_blank">투어미션 성공하고 선물받기</StyledA>
+          <StyledA
+            href="https://mmp7.cafe24.com/storymap/daeguyasijang.html"
+            target="_blank"
+          >
+            투어미션 성공하고 선물받기
+          </StyledA>
           <Cloud />
-          <StyledA href="https://www.somunnanshop.com/index.php/home" target="_blank">야시장 음식 스마트폰으로 주문하기</StyledA>
+          <StyledA
+            href="https://www.somunnanshop.com/index.php/home"
+            target="_blank"
+          >
+            야시장 음식 스마트폰으로 주문하기
+          </StyledA>
           <Star />
-          <StyledA href="https://mmp7.cafe24.com/storymap/daeguyasijang.html" target="_blank">투어미션 성공하고 선물받기</StyledA>
+          <StyledA
+            href="https://mmp7.cafe24.com/storymap/daeguyasijang.html"
+            target="_blank"
+          >
+            투어미션 성공하고 선물받기
+          </StyledA>
           <Cloud />
-          <StyledA href="https://www.somunnanshop.com/index.php/home" target="_blank">야시장 음식 스마트폰으로 주문하기</StyledA>
+          <StyledA
+            href="https://www.somunnanshop.com/index.php/home"
+            target="_blank"
+          >
+            야시장 음식 스마트폰으로 주문하기
+          </StyledA>
           <Star />
-          <StyledA href="https://mmp7.cafe24.com/storymap/daeguyasijang.html" target="_blank">투어미션 성공하고 선물받기</StyledA>
+          <StyledA
+            href="https://mmp7.cafe24.com/storymap/daeguyasijang.html"
+            target="_blank"
+          >
+            투어미션 성공하고 선물받기
+          </StyledA>
           <Cloud />
-          <StyledA href="https://www.somunnanshop.com/index.php/home" target="_blank">야시장 음식 스마트폰으로 주문하기</StyledA>
+          <StyledA
+            href="https://www.somunnanshop.com/index.php/home"
+            target="_blank"
+          >
+            야시장 음식 스마트폰으로 주문하기
+          </StyledA>
           <Star />
-          <StyledA href="https://mmp7.cafe24.com/storymap/daeguyasijang.html" target="_blank">투어미션 성공하고 선물받기</StyledA>
+          <StyledA
+            href="https://mmp7.cafe24.com/storymap/daeguyasijang.html"
+            target="_blank"
+          >
+            투어미션 성공하고 선물받기
+          </StyledA>
         </ShortcutWapper>
       </ShortcutContainer>
       <Section2>
@@ -261,24 +294,24 @@ export default function Home() {
           서문시장 야시장의 먹거리 둘러보기!
         </SectionDesc>
         <FoodContainer>
-<FoodList>
-          {foodArr.map((food, index) => (
-            <FoodItem key={index}>
-              <FoodImgWrapper>
-                <FoodImg alt="음식이미지" src={food.image} />
-              </FoodImgWrapper>
-              <FoodTitle>{food.name}</FoodTitle>
-              <FoodTag>{food.tag}</FoodTag>
-              <FoodDesc>{food.desc}</FoodDesc>
-            </FoodItem>
-          ))}
-        </FoodList>
+          <FoodList>
+            {foodArr.map((food, index) => (
+              <FoodItem key={index}>
+                <FoodImgWrapper>
+                  <FoodImg alt="음식이미지" src={food.image} />
+                </FoodImgWrapper>
+                <FoodTitle>{food.name}</FoodTitle>
+                <FoodTag>{food.tag}</FoodTag>
+                <FoodDesc>{food.desc}</FoodDesc>
+              </FoodItem>
+            ))}
+          </FoodList>
         </FoodContainer>
       </Section3>
       <Section4>
-      <SectionTitle color="#081435">운영시간</SectionTitle>
+        <SectionTitle color="#081435">운영시간</SectionTitle>
         <ContentWrapper>
-        <OperatingTime />
+          <OperatingTime />
         </ContentWrapper>
       </Section4>
     </HomeMain>
