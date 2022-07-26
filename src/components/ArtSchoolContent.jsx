@@ -4,8 +4,8 @@ import {
   ScrollPage,
   batch,
   Fade,
-  MoveIn,
   MoveOut,
+  Sticky,
 } from "react-scroll-motion";
 import {
   Base,
@@ -18,11 +18,11 @@ import {
 } from "./Introduce/IntroduceMain";
 
 export default function ArtSchoolContent() {
-  const animation = batch(MoveIn(0, -500), MoveOut(0, -500));
+  const animation = batch(Sticky(), MoveOut(0, -200), Fade());
   return (
     <>
       <IntroWrapper>
-        <SubHeading>서문야시장의 또 하나의 즐거움, 거리예술학교!</SubHeading>
+        <SubHeading style={{marginTop: "200px"}}>서문야시장의 또 하나의 즐거움, 거리예술학교!</SubHeading>
         <Desc>
           대구 서문시장 야시장은 볼거리와 즐길거리도 가득하답니다.
           <br />
@@ -30,7 +30,10 @@ export default function ArtSchoolContent() {
           무엇을 보더라도 즐거움이 가득한 밤이 당신을 기다립니다!
         </Desc>
       </IntroWrapper>
-      <Base>
+      <Base snap="mandatory">
+        <ScrollPage>
+          <Animator animation={animation}></Animator>
+        </ScrollPage>
         <ScrollPage>
           <Animator animation={animation}>
             <IntroImg src="https://github.com/hwanyb/project_seomun/blob/master/img/school1.jpg?raw=true" />

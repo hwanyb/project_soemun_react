@@ -7,16 +7,15 @@ import {
   Fade,
   MoveIn,
   MoveOut,
+  Sticky,
 } from "react-scroll-motion";
 import styled from "styled-components";
 import { Noto300, PyeongBold, PyeongLight } from "../../style/Common";
 
 export const Base = styled(ScrollContainer)`
   width: 100%;
-  text-align: center;
 `;
 export const IntroWrapper = styled.div`
-  margin-bottom: 200px;
 `;
 export const SubHeading = styled(PyeongBold)`
   font-size: 20px;
@@ -51,16 +50,23 @@ export const IntroText = styled(Noto300)`
 `;
 
 export default function IntroduceMain() {
+  const animation = batch(Fade(), Sticky(), MoveOut(0, -200), MoveIn(0, -200));
   return (
     <>
       <IntroWrapper>
         <SubHeading>세계인과 함께하는, 대한민국 대표 야시장</SubHeading>
         <Desc>여러분과 함께 만들어가는 夜한 테마파크!</Desc>
       </IntroWrapper>
-      <Base>
+      <Base snap="mandatory">
         <ScrollPage>
           <Animator
-            animation={batch(MoveIn(0, -500), MoveOut(0, -500), Fade())}
+            animation={animation}
+          >
+          </Animator>
+        </ScrollPage>
+        <ScrollPage>
+          <Animator
+            animation={animation}
           >
             <IntroImg src="https://github.com/hwanyb/project_seomun/blob/master/img/over_img1.jpg?raw=true" />
             <IntroTitle>
@@ -75,7 +81,7 @@ export default function IntroduceMain() {
         </ScrollPage>
         <ScrollPage>
           <Animator
-            animation={batch(MoveIn(0, -500), MoveOut(0, -500), Fade())}
+            animation={animation}
           >
             <IntroImg src="https://github.com/hwanyb/project_seomun/blob/master/img/over_img2.jpg?raw=true" />
             <IntroTitle>먹거리 • 볼거리 • 즐길거리</IntroTitle>
@@ -91,7 +97,7 @@ export default function IntroduceMain() {
         </ScrollPage>
         <ScrollPage>
           <Animator
-            animation={batch(MoveIn(-200, 0), MoveOut(0, -500), Fade())}
+            animation={animation}
           >
             <IntroImg src="https://github.com/hwanyb/project_seomun/blob/master/img/over_img3.jpg?raw=true" />
             <IntroTitle>대구의 자랑거리 !</IntroTitle>
@@ -106,7 +112,7 @@ export default function IntroduceMain() {
         </ScrollPage>
         <ScrollPage>
           <Animator
-            animation={batch(MoveIn(0, -500), MoveOut(0, -500), Fade())}
+            animation={animation}
           >
             <IntroImg src="https://github.com/hwanyb/project_seomun/blob/master/img/over_img5.jpg?raw=true" />
             <IntroTitle>창업상단 육성 !</IntroTitle>
