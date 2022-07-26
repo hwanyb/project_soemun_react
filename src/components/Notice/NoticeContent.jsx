@@ -12,6 +12,25 @@ max-width: 1600px;
   padding: 0 200px 150px 200px;
   margin: 0 auto;
 `;
+
+const BtnWrapper = styled.div`
+  display: flex;
+  justify-content: end;
+  margin-bottom: 20px;
+`;
+
+const NoticeBtn = styled.button`
+  background-color: #ffc806;
+  color: #081435;
+  &:hover {
+    background-color: #ff9900;
+    font-weight: 700;
+  }
+  &:last-child {
+    margin-left: 10px;
+  }
+`;
+
 export default function NoticeContent() {
   const getList = JSON.parse(localStorage.getItem("noticeArr"));
   const [mainView, setMainView] = useState('list');
@@ -31,12 +50,12 @@ export default function NoticeContent() {
   };
   const ListBtn = () => {
     return (
-      <button onClick={onListClick}>글 목록</button>
+      <NoticeBtn onClick={onListClick}>글 목록</NoticeBtn>
     )
   };
   const WritingBtn = () => {
     return (
-      <button onClick={onWriteClick}>글 작성</button>
+      <NoticeBtn onClick={onWriteClick}>글 작성</NoticeBtn>
     )
   };
 
@@ -46,15 +65,23 @@ export default function NoticeContent() {
             return (
               <>
                 <Subtitle>공지사항 목록</Subtitle>
-                <WritingBtn />
-                <NoticeList noticeList={noticeList} setSelectedPost={setSelectedPost} setMainView={setMainView}  />
+                <BtnWrapper>
+                  <WritingBtn />
+                </BtnWrapper>
+                <NoticeList
+                  noticeList={noticeList}
+                  setSelectedPost={setSelectedPost}
+                  setMainView={setMainView}
+                />
               </>
             );
         case 'writing':
             return (
               <>
                 <Subtitle>공지사항 글 작성</Subtitle>
-                <ListBtn />
+                <BtnWrapper>
+                  <ListBtn />
+                </BtnWrapper>
                 <NoticeWriting setMainView={setMainView} noticeList={noticeList} />
               </>
             );
@@ -62,9 +89,14 @@ export default function NoticeContent() {
             return (
               <>
                 <Subtitle>공지사항 글 확인</Subtitle>
-                <ListBtn />
-                <WritingBtn />
-                <NoticeDetail selectedPost={selectedPost} setMainView={setMainView} />
+                <BtnWrapper>
+                  <WritingBtn />
+                  <ListBtn />
+                </BtnWrapper>
+                <NoticeDetail
+                  selectedPost={selectedPost}
+                  setMainView={setMainView}
+                />
               </>
             );
         default:

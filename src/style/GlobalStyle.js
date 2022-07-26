@@ -36,6 +36,7 @@ button {
     font-weight: 500;
     border-radius: 10px;
     cursor: pointer;
+    transition: all 0.2s ease-in-out;
 }
 a {
     text-decoration: none;
