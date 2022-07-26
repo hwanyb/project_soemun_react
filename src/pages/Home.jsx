@@ -150,6 +150,11 @@ export default function Home() {
           spaceBetween={20}
           slidesPerGroup={3}
           loop={true}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          modules={[Autoplay]}
         >
           {HomeImgArr.map((img) => (
             <StyledSlide key={img.id}>
