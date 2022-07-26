@@ -4,15 +4,11 @@ import { busArr, subwayArr } from "../../assets/data";
 import { Icon, Noto300, Noto500, Noto700 } from "../../style/Common";
 import Map from "../common/Map";
 
-const Base = styled.div`
-  /* width: 100%; */
-  padding-bottom: 100px;
-`;
+const Base = styled.div``;
 const MapWrppaer = styled.div`
   margin-bottom: 30px;
 `;
 const InfoWrapper = styled.div`
-  /* width: 100%; */
   margin: 0 auto;
   border-top: 1px solid #ffc806;
   border-bottom: 1px solid #ffc806;
@@ -48,7 +44,6 @@ const InfoText = styled(Noto500)`
   line-height: 30px;
   font-size: 18px;
   margin-bottom: 10px;
-
 `;
 const TransportInfo = styled.div`
   margin: 0 auto;
@@ -72,7 +67,6 @@ const TransportWapper = styled.a`
     color: #ff9900;
     transition: all 0.2s ease-in-out;
   }
-  
 `;
 const SubwayLine = styled(Noto300)`
   line-height: 16px;

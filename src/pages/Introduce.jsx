@@ -12,6 +12,7 @@ const Base = styled.div`
   position: relative;
   top: 70px;
   text-align: center;
+  padding-bottom: 80px;
 `;
 const ContentWrapper = styled.div`
   padding: 0 200px;

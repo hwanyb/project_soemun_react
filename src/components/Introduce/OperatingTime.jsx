@@ -2,9 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Noto700, Noto900, PyeongBold } from "../../style/Common";
 
-const Base = styled.div`
-  padding-bottom: 100px;
-`;
+const Base = styled.div``;
 const BoxWrapper = styled.div`
   display: flex;
   padding: 20px 50px;
@@ -46,10 +44,9 @@ const Time = styled(Noto700)`
   &:first-child {
     margin-bottom: 20px;
   }
-  
 `;
 const Caution = styled(PyeongBold)`
-  font-size: 30px;
+  font-size: 24px;
   color: red;
   margin-top: 30px;
 `;
