@@ -11,6 +11,7 @@ import Introduce from './pages/Introduce';
 import Notice from './pages/Notice';
 import GlobalStyle from './style/GlobalStyle';
 import { noticeArr } from './assets/data';
+import ScrollToTop from './components/common/ScrollToTop';
 
 function App() {
   if (localStorage.getItem("noticeArr") === null) {
@@ -24,6 +25,7 @@ function App() {
     <>
       <GlobalStyle />
       <BrowserRouter>
+        <ScrollToTop />
         <Header />
         <SNB />
         <Routes>
