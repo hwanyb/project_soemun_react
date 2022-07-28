@@ -12,18 +12,29 @@ const Base = styled.div`
   justify-content: center;
 `;
 const TextWrapper = styled.div`
-position: absolute;
-
+  position: absolute;
 `;
 const Text = styled(PyeongBold)`
   font-size: 40px;
   color: #ffc806;
   margin-top: 30px;
+  @media screen and (max-width: 900px) {
+    font-size: 30px;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 24px;
+  }
 `;
 const CurrentNav = styled(PyeongLight)`
-font-size: 24px;
+  font-size: 24px;
   color: #fff;
   margin-top: 20px;
+  @media screen and (max-width: 900px) {
+    font-size: 18px;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 14px;
+  }
 `;
 
 export default function Title({ children }) {
