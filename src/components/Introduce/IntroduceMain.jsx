@@ -15,8 +15,24 @@ import { Noto300, PyeongBold, PyeongLight } from "../../style/Common";
 export const Base = styled(ScrollContainer)`
   width: 100%;
 `;
-export const IntroWrapper = styled.div`
+export const StyledScrollPage = styled(ScrollPage)``;
+export const StyledAnimator = styled(Animator)`
+  width: 100%;
+  padding: 0 200px;
+  @media screen and (max-width: 1600px) {
+    padding: 0 150px;
+  }
+  @media screen and (max-width: 1200px) {
+    padding: 0 100px;
+  }
+  @media screen and (max-width: 900px) {
+    padding: 0 50px;
+  }
+  @media screen and (max-width: 600px) {
+    padding: 0 20px;
+  }
 `;
+export const IntroWrapper = styled.div``;
 export const SubHeading = styled(PyeongBold)`
   font-size: 20px;
   color: #ff9900;
@@ -32,6 +48,9 @@ export const IntroImg = styled.img`
   object-fit: cover;
   border-radius: 20px;
   margin: 100px 0;
+  @media screen and (max-width: 900px) {
+    height: 300px;
+  }
 `;
 export const IntroTitle = styled(PyeongBold)`
   background-color: #081435;
@@ -41,12 +60,27 @@ export const IntroTitle = styled(PyeongBold)`
   margin: 0 auto;
   border-radius: 20px;
   font-size: 30px;
+  @media screen and (max-width: 1200px) {
+    font-size: 24px;
+    border-radius: 15px;
+  }
+  @media screen and (max-width: 900px) {
+    font-size: 18px;
+    border-radius: 10px;
+  }
 `;
 
 export const IntroText = styled(Noto300)`
   color: #081435;
   font-size: 18px;
   margin-top: 50px;
+  @media screen and (max-width: 1200px) {
+    font-size: 14px;
+    margin-top: 30px;
+  }
+  @media screen and (max-width: 900px) {
+    font-size: 11px;
+  }
 `;
 
 export default function IntroduceMain() {
@@ -58,16 +92,11 @@ export default function IntroduceMain() {
         <Desc>여러분과 함께 만들어가는 夜한 테마파크!</Desc>
       </IntroWrapper>
       <Base snap="mandatory">
-        <ScrollPage>
-          <Animator
-            animation={animation}
-          >
-          </Animator>
-        </ScrollPage>
-        <ScrollPage>
-          <Animator
-            animation={animation}
-          >
+        <StyledScrollPage>
+          <StyledAnimator animation={animation}></StyledAnimator>
+        </StyledScrollPage>
+        <StyledScrollPage>
+          <StyledAnimator animation={animation}>
             <IntroImg src="https://github.com/hwanyb/project_seomun/blob/master/img/over_img1.jpg?raw=true" />
             <IntroTitle>
               2016년 6월에 개장한 총거리 약 350M 대형 야시장
@@ -77,12 +106,10 @@ export default function IntroduceMain() {
               <br />총 80대의 매대에서 다양한 먹거리, 살거리를 판매하며 매일
               저녁, 시민과 관광객에게 즐거움을 선사하는 복합문화공간입니다.
             </IntroText>
-          </Animator>
-        </ScrollPage>
-        <ScrollPage>
-          <Animator
-            animation={animation}
-          >
+          </StyledAnimator>
+        </StyledScrollPage>
+        <StyledScrollPage>
+          <StyledAnimator animation={animation}>
             <IntroImg src="https://github.com/hwanyb/project_seomun/blob/master/img/over_img2.jpg?raw=true" />
             <IntroTitle>먹거리 • 볼거리 • 즐길거리</IntroTitle>
             <IntroText>
@@ -93,12 +120,10 @@ export default function IntroduceMain() {
               사후면세점 제도, 복합쇼핑 COMPLEX 조성 등 다양한 계획을 진행 할
               예정입니다.
             </IntroText>
-          </Animator>
-        </ScrollPage>
-        <ScrollPage>
-          <Animator
-            animation={animation}
-          >
+          </StyledAnimator>
+        </StyledScrollPage>
+        <StyledScrollPage>
+          <StyledAnimator animation={animation}>
             <IntroImg src="https://github.com/hwanyb/project_seomun/blob/master/img/over_img3.jpg?raw=true" />
             <IntroTitle>대구의 자랑거리 !</IntroTitle>
             <IntroText>
@@ -108,12 +133,10 @@ export default function IntroduceMain() {
               음식, 우리의 추억과 감성을 자극하는 다양한 볼거리,살거리가
               즐비합니다.
             </IntroText>
-          </Animator>
-        </ScrollPage>
-        <ScrollPage>
-          <Animator
-            animation={animation}
-          >
+          </StyledAnimator>
+        </StyledScrollPage>
+        <StyledScrollPage>
+          <StyledAnimator animation={animation}>
             <IntroImg src="https://github.com/hwanyb/project_seomun/blob/master/img/over_img5.jpg?raw=true" />
             <IntroTitle>창업상단 육성 !</IntroTitle>
             <IntroText>
@@ -127,8 +150,8 @@ export default function IntroduceMain() {
               서문시장 야시장은 전통시장이 젊은이들을 위한 새로운 삶의 터전이 될
               수 있는 ‘획기적인’ 모델을 제시하고 있습니다.
             </IntroText>
-          </Animator>
-        </ScrollPage>
+          </StyledAnimator>
+        </StyledScrollPage>
       </Base>
     </>
   );
