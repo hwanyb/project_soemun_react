@@ -16,7 +16,19 @@ const Base = styled.header`
   padding: 0 200px;
   align-items: center;
   box-shadow: 1px 1px 5px #0814352f;;
+  @media screen and (max-width: 1600px) {
+    padding: 0 150px;
+    
+  }
+  @media screen and (max-width: 1200px) {
+    padding: 0 100px;
+    
+  }
+  @media screen and (max-width: 900px) {
+    padding: 10px 50px;
+    flex-direction: column;
 
+  }
 `;
 const StyledLink = styled(Link)`
     text-decoration: none;
@@ -28,6 +40,9 @@ const GNB = styled.nav`
 const LogoTitle = styled(PyeongBold)`
     color: #081435;
     font-size: 30px;
+    @media screen and (max-width: 900px) {
+    font-size: 24px;
+  }
 `;
 const NavItem = styled(PyeongLight)`
     color: #081435;
@@ -37,6 +52,9 @@ const NavItem = styled(PyeongLight)`
     &:hover{
         color: #FF9900;
     }
+    @media screen and (max-width: 900px) {
+    font-size: 14px;
+  }
 `;
 
 export default function Header() {
