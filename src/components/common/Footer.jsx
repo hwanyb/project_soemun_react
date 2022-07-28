@@ -7,6 +7,18 @@ const Base = styled.footer`
   width: 100%;
   background-color: #081435;
   padding: 50px 200px;
+  @media screen and (max-width: 1600px) {
+    padding: 50px 150px;
+  }
+  @media screen and (max-width: 1200px) {
+    padding: 50px 100px;
+  }
+  @media screen and (max-width: 900px) {
+    padding: 50px 50px;
+  }
+  @media screen and (max-width: 600px) {
+    padding: 50px 20px;
+  }
 `;
 const FooterTop = styled.div`
   display: flex;
@@ -38,10 +50,18 @@ const FooterMiddle = styled.div`
 `;
 const CoarpImg = styled.img`
   height: 28px;
+  @media screen and (max-width: 1200px) {
+    height: 18px;
+  }
 `;
 const FooterBottom = styled.div`
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
 `;
 const CopyRightWrapper = styled.div``;
 const CopyRight = styled(Noto300)`
@@ -51,6 +71,9 @@ const CopyRight = styled(Noto300)`
 const ContactWrapper = styled.div`
   align-items: flex-end;
   display: flex;
+  @media screen and (max-width: 900px) {
+    margin-top: 20px;
+  }
 `;
 const Contact = styled(Noto300)`
   color: #acbacc;
