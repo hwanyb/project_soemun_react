@@ -8,20 +8,31 @@ const Base = styled.div`
     align-items: center;
     justify-content: center;
     margin: 100px 0;
+  @media screen and (max-width: 900px) {
+    margin: 80px 0;
+  }
 `;
-const Background = styled.div``;
+const Background = styled.div`
+  &>svg {
+    width: 400px;
+    @media screen and (max-width: 900px) {
+      width: 350px;
+  }
+  }
+`;
 const SubtitleText = styled(PyeongBold)`
     font-size: 30px;
     color: #081435;
     position: absolute;
+    @media screen and (max-width: 900px) {
+      font-size: 24px;
+  }
 `;
 export default function Subtitle({ children }) {
   return (
     <Base>
       <Background>
         <svg
-          width="377"
-          height="85"
           viewBox="0 0 377 85"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
