@@ -247,6 +247,20 @@ const Section4 = styled.section`
   text-align: center;
   position: relative;
   z-index: 9;
+  @media screen and (max-width: 1600px) {
+    padding: 80px 150px;
+    
+  }
+  @media screen and (max-width: 1200px) {
+    padding: 80px 100px;
+    
+  }
+  @media screen and (max-width: 900px) {
+    padding: 50px 50px;
+  }
+  @media screen and (max-width: 600px) {
+    padding: 50px 20px;
+  }
 `;
 const ContentWrapper = styled.div`
   margin-top: 30px;
