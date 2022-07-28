@@ -10,11 +10,27 @@ const Base = styled.div`
   position: sticky;
   top: 70px;
   z-index: 9999;
+  @media screen and (max-width: 1600px) {
+    padding: 0 150px;
+  }
+  @media screen and (max-width: 1200px) {
+    padding: 0 100px;
+  }
+  @media screen and (max-width: 900px) {
+    padding: 0 50px;
+  }
+  @media screen and (max-width: 600px) {
+    padding: 0 20px;
+    height: 40px;
+  }
 `;
 const NavList = styled.ul`
   display: flex;
   justify-content: space-between;
   line-height: 50px;
+  @media screen and (max-width: 600px) {
+    line-height: 40px;
+  }
   & > li {
     width: 250px;
     font-size: 18px;
@@ -23,6 +39,10 @@ const NavList = styled.ul`
     transition: all 0.2s ease-in-out;
     &:hover {
       color: #ff9900;
+    }
+    @media screen and (max-width: 900px) {
+      width: fit-content;
+      font-size: 14px;
     }
   }
 `;
