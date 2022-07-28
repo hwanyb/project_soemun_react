@@ -10,6 +10,7 @@ import Background from "../components/common/Background";
 import Cloud from "../components/svg/Cloud";
 import Star from "../components/svg/Star";
 import OperatingTime from "../components/Introduce/OperatingTime";
+import { useNavigate } from "react-router-dom";
 
 const HomeMain = styled.main`
   position: relative;
@@ -26,6 +27,12 @@ const Section1 = styled.section`
   justify-content: center;
   background-color: #081435;
   padding: 30px;
+  @media screen and (max-width: 900px) {
+    height: 400px;
+  }
+  @media screen and (max-width: 600px) {
+    height: 300px;
+  }
 `;
 const IntroWrapper = styled.div`
   position: absolute;
@@ -35,11 +42,17 @@ const IntroduceTextLight = styled(PyeongLight)`
   color: #ffc806;
   font-size: 14px;
   line-height: 20px;
+  @media screen and (max-width: 900px) {
+    font-size: 11px;
+  }
 `;
 const IntroduceText = styled(PyeongBold)`
   color: #fff;
   font-size: 30px;
   margin: 20px 0;
+  @media screen and (max-width: 900px) {
+    font-size: 24px;
+  }
 `;
 const IntroBtn = styled.button`
   background-color: #ffc806;
@@ -70,6 +83,11 @@ const ShortcutWapper = styled.div`
   &:hover {
     animation-play-state: paused;
   }
+  @media screen and (max-width: 900px) {
+    & > svg {
+      height: 30px;
+    }
+  }
 `;
 const StyledA = styled.a`
   color: #081435;
@@ -77,6 +95,12 @@ const StyledA = styled.a`
   font-size: 24px;
   margin: 0 30px;
   white-space: nowrap;
+  @media screen and (max-width: 900px) {
+    font-size: 14px;
+    & > svg {
+      height: 50px;
+    }
+  }
 `;
 
 const Section2 = styled.section`
@@ -86,15 +110,35 @@ const Section2 = styled.section`
   text-align: center;
   position: relative;
   z-index: 9;
+  @media screen and (max-width: 1600px) {
+    padding: 80px 150px;
+    
+  }
+  @media screen and (max-width: 1200px) {
+    padding: 80px 100px;
+    
+  }
+  @media screen and (max-width: 900px) {
+    padding: 50px 50px;
+  }
+  @media screen and (max-width: 600px) {
+    padding: 50px 20px;
+  }
 `;
 const SectionTitle = styled(PyeongBold)`
   font-size: 30px;
   color: ${(props) => props.color};
+  @media screen and (max-width: 900px) {
+    font-size: 20px;
+  }
 `;
 const SectionDesc = styled(PyeongLight)`
   font-size: 14px;
   color: ${(props) => props.color};
   margin-top: 10px;
+  @media screen and (max-width: 900px) {
+    font-size: 11px;
+  }
 `;
 const StyledSwiper = styled(Swiper)`
   width: 100%;
@@ -108,6 +152,9 @@ const StyledSlide = styled(SwiperSlide)`
   img {
     height: 110%;
     object-fit: cover;
+  @media screen and (max-width: 900px) {
+    width: 100%;
+  }
   }
 `;
 
@@ -115,6 +162,20 @@ const Section3 = styled.section`
   text-align: center;
   width: 100%;
   padding: 80px 200px;
+  @media screen and (max-width: 1600px) {
+    padding: 80px 150px;
+    
+  }
+  @media screen and (max-width: 1200px) {
+    padding: 80px 100px;
+    
+  }
+  @media screen and (max-width: 900px) {
+    padding: 50px 50px;
+  }
+  @media screen and (max-width: 600px) {
+    padding: 50px 20px;
+  }
 `;
 const FoodContainer = styled.div`
   width: 100%;
@@ -192,6 +253,7 @@ const ContentWrapper = styled.div`
 `;
 
 export default function Home() {
+  const navigate = useNavigate();
   return (
     <HomeMain>
       <Section1>
@@ -202,7 +264,7 @@ export default function Home() {
             글로벌하게 먹고, 마시고, 즐길 수 있는
           </IntroduceTextLight>
           <IntroduceText>대한민국 No.1 야시장</IntroduceText>
-          <IntroBtn>더보기</IntroBtn>
+          <IntroBtn onClick={() => navigate('/introduce')}>더보기</IntroBtn>
         </IntroWrapper>
       </Section1>
       <ShortcutContainer>
@@ -271,7 +333,7 @@ export default function Home() {
           서문시장 야시장의 생생한 현장 둘러보기!
         </SectionDesc>
         <StyledSwiper
-          slidesPerView={4}
+          slidesPerView={1}
           spaceBetween={20}
           slidesPerGroup={3}
           loop={true}
@@ -280,6 +342,17 @@ export default function Home() {
             disableOnInteraction: false,
           }}
           modules={[Autoplay]}
+          breakpoints={{
+            600: {
+              slidesPerView: 2
+            },
+            900: {
+              slidesPerView: 3
+            },
+            1200: {
+              slidesPerView: 4
+            }
+          }}
         >
           {HomeImgArr.map((img) => (
             <StyledSlide key={img.id}>

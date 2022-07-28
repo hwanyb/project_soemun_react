@@ -37,6 +37,11 @@ button {
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
+    @media screen and (max-width: 900px) {
+    font-size: 11px;
+    border-radius: 5px;
+    padding: 3px 15px;
+  }
 }
 a {
     text-decoration: none;

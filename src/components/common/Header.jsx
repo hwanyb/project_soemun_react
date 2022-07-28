@@ -27,7 +27,6 @@ const Base = styled.header`
   @media screen and (max-width: 900px) {
     padding: 10px 50px;
     flex-direction: column;
-
   }
 `;
 const StyledLink = styled(Link)`
