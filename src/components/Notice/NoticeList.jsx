@@ -16,9 +16,21 @@ const ListItem = styled.li`
   &:hover {
     background-color: #ffc90665;
   }
+  @media screen and (max-width: 1200px) {
+    padding: 0;
+  }
+  @media screen and (max-width: 900px) {
+    grid-template-columns: 50px 2fr 0.5fr;
+    white-space: nowrap;
+  }
 `;
 const ItemIndex = styled(Noto300)``;
-const ItemTitle = styled(Noto700)``;
+const ItemTitle = styled(Noto700)`
+  @media screen and (max-width: 600px) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+`;
 const ItemDate = styled(Noto300)`
   text-align: right;
 `;

@@ -8,6 +8,7 @@ const Base = styled.div`
   position: relative;
   top: 70px;
   text-align: center;
+  padding-bottom: 100px;
 `;
 
 export default function Notice() {

@@ -7,6 +7,7 @@ const Base = styled.footer`
   width: 100%;
   background-color: #081435;
   padding: 50px 200px;
+  margin-top: 100px;
   @media screen and (max-width: 1600px) {
     padding: 50px 150px;
   }
