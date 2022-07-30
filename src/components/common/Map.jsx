@@ -1,17 +1,20 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { mapArr } from "../../assets/data";
-const Base = styled.div`
-  width: 100%;
-  position: relative;
-`;
+const Base = styled.div``;
 const MapImgWapper = styled.a`
-  display: block;
+position: relative;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 20px;
 `;
 const MapImg = styled.img`
-  width: 100%;
-  border-radius: 20px;
-  margin-bottom: 5px;
+  margin: auto;
+  display: block;
+  margin-top: -50px;
 `;
 
 const KakaoMapInfoWrapper = styled.div`

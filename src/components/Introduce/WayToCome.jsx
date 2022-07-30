@@ -4,7 +4,10 @@ import { busArr, subwayArr } from "../../assets/data";
 import { Icon, Noto300, Noto500, Noto700 } from "../../style/Common";
 import Map from "../common/Map";
 
-const Base = styled.div``;
+const Base = styled.div`
+  position: relative;
+  margin-bottom: 80px;
+`;
 const MapWrppaer = styled.div`
   margin-bottom: 30px;
 `;
@@ -26,6 +29,9 @@ const InfoTitleWrapper = styled.div`
 const TitleIcon = styled(Icon)`
   font-size: 30px;
   margin-right: 10px;
+  @media screen and (max-width: 600px) {
+    font-size: 24px;
+  }
 `;
 const InfoTitle = styled(Noto700)`
   justify-content: center;
@@ -34,9 +40,17 @@ const InfoTitle = styled(Noto700)`
   color: #081435;
   font-size: 18px;
   margin-bottom: 10px;
+  @media screen and (max-width: 600px) {
+    font-size: 14px;
+  line-height: 24px;
+
+  }
 `;
 const InfoTextWapper = styled.div`
   justify-content: center;
+  @media screen and (max-width: 600px) {
+flex-wrap: wrap;
+  }
 `;
 const InfoText = styled(Noto500)`
   text-align: left;
@@ -44,6 +58,11 @@ const InfoText = styled(Noto500)`
   line-height: 30px;
   font-size: 18px;
   margin-bottom: 10px;
+  @media screen and (max-width: 600px) {
+    font-size: 14px;
+  line-height: 24px;
+
+  }
 `;
 const TransportInfo = styled.div`
   margin: 0 auto;
@@ -67,6 +86,7 @@ const TransportWapper = styled.a`
     color: #ff9900;
     transition: all 0.2s ease-in-out;
   }
+  
 `;
 const SubwayLine = styled(Noto300)`
   line-height: 16px;

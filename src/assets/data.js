@@ -273,7 +273,7 @@ export const mapArr = [
     {
         name: "서문시장",
         mapUrl: "http://kko.to/QRhOiymZFe",
-        mapImgUrl: "http://t1.daumcdn.net/roughmap/imgmap/5ad6254ae2eb392104baa4aac20dffb52266548f565faf2dedf5a9ca0544a454",
+        mapImgUrl: "http://t1.daumcdn.net/roughmap/imgmap/22610f4b8d20243120ba42b8fc692b609847ea32151357ce9904b8ed48d3a23c",
         loadViewUrl: "http://kko.to/PgZmBEDTGA",
     },
     {
