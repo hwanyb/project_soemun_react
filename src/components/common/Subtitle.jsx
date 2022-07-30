@@ -3,29 +3,38 @@ import styled from "styled-components";
 import { PyeongBold } from "../../style/Common";
 
 const Base = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 100px 0;
   @media screen and (max-width: 900px) {
     margin: 80px 0;
   }
+  @media screen and (max-width: 600px) {
+    margin: 50px 0;
+  }
 `;
 const Background = styled.div`
-  &>svg {
+  & > svg {
     width: 400px;
     @media screen and (max-width: 900px) {
       width: 350px;
-  }
+    }
+    @media screen and (max-width: 600px) {
+      width: 250px;
+    }
   }
 `;
 const SubtitleText = styled(PyeongBold)`
-    font-size: 30px;
-    color: #081435;
-    position: absolute;
-    @media screen and (max-width: 900px) {
-      font-size: 24px;
+  font-size: 30px;
+  color: #081435;
+  position: absolute;
+  @media screen and (max-width: 900px) {
+    font-size: 24px;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 18px;
   }
 `;
 export default function Subtitle({ children }) {
@@ -45,7 +54,7 @@ export default function Subtitle({ children }) {
           />
         </svg>
       </Background>
-      <SubtitleText>{ children }</SubtitleText>
+      <SubtitleText>{children}</SubtitleText>
     </Base>
   );
 }
