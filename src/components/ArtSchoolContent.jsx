@@ -14,6 +14,8 @@ import {
   IntroText,
   IntroTitle,
   IntroWrapper,
+  StyledAnimator,
+  StyledScrollPage,
   SubHeading,
 } from "./Introduce/IntroduceMain";
 
@@ -31,11 +33,11 @@ export default function ArtSchoolContent() {
         </Desc>
       </IntroWrapper>
       <Base snap="mandatory">
-        <ScrollPage>
-          <Animator animation={animation}></Animator>
-        </ScrollPage>
-        <ScrollPage>
-          <Animator animation={animation}>
+        <StyledScrollPage>
+          <StyledAnimator animation={animation}></StyledAnimator>
+        </StyledScrollPage>
+        <StyledScrollPage>
+          <StyledAnimator animation={animation}>
             <IntroImg src="https://github.com/hwanyb/project_seomun/blob/master/img/school1.jpg?raw=true" />
             <IntroTitle>다양한 공연</IntroTitle>
             <IntroText>
@@ -47,10 +49,10 @@ export default function ArtSchoolContent() {
               거기에 다양한 예술공연이 밤늦도록 펼쳐지니 걷고, 먹고, 음악을
               들으며 시간을 보내기에는 더없이 좋답니다 !
             </IntroText>
-          </Animator>
-        </ScrollPage>
-        <ScrollPage>
-          <Animator animation={animation}>
+          </StyledAnimator>
+        </StyledScrollPage>
+        <StyledScrollPage>
+          <StyledAnimator animation={animation}>
             <IntroImg src="https://github.com/hwanyb/project_seomun/blob/master/img/school2.jpg?raw=true" />
             <IntroTitle>미디어파사드</IntroTitle>
             <IntroText>
@@ -61,10 +63,10 @@ export default function ArtSchoolContent() {
               서문시장 주차타워 벽면을 빔에서 쏘아져나오는 화려하고 다이나믹한
               서문 야시장의 미디어파사드를 놓치지 마세요.
             </IntroText>
-          </Animator>
-        </ScrollPage>
-        <ScrollPage>
-          <Animator animation={animation}>
+          </StyledAnimator>
+        </StyledScrollPage>
+        <StyledScrollPage>
+          <StyledAnimator animation={animation}>
             <IntroImg src="https://github.com/hwanyb/project_seomun/blob/master/img/school3.jpg?raw=true" />
             <IntroTitle>인터랙티브 미디어아트</IntroTitle>
             <IntroText>
@@ -79,10 +81,10 @@ export default function ArtSchoolContent() {
               천막 하나에도 영상의 아름다움을 느낄 수 있는 서문시장 야시장! 역시
               남다르죠?
             </IntroText>
-          </Animator>
-        </ScrollPage>
-        <ScrollPage>
-          <Animator animation={animation}>
+          </StyledAnimator>
+        </StyledScrollPage>
+        <StyledScrollPage>
+          <StyledAnimator animation={animation}>
             <IntroImg src="https://github.com/hwanyb/project_seomun/blob/master/img/school4.jpg?raw=true" />
             <IntroTitle>포토존</IntroTitle>
             <IntroText>
@@ -96,8 +98,8 @@ export default function ArtSchoolContent() {
               이곳에서 잠시 쉬며 서문 야시장 마스코트도 만나 인생 셀카도 남기고
               가세요!
             </IntroText>
-          </Animator>
-        </ScrollPage>
+          </StyledAnimator>
+        </StyledScrollPage>
       </Base>
     </>
   );

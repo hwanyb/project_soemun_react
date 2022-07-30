@@ -10,6 +10,18 @@ const Base = styled.div`
 `;
 const ContentWrapper = styled.div`
   padding: 0 200px;
+  @media screen and (max-width: 1600px) {
+    padding: 0 150px;
+  }
+  @media screen and (max-width: 1200px) {
+    padding: 0 100px;
+  }
+  @media screen and (max-width: 900px) {
+    padding: 0 50px;
+  }
+  @media screen and (max-width: 600px) {
+    padding: 0 20px;
+  }
 `;
 export default function ArtSchool() {
   return (

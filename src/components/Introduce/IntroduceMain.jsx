@@ -78,9 +78,6 @@ export const IntroText = styled(Noto300)`
     font-size: 14px;
     margin-top: 30px;
   }
-  @media screen and (max-width: 900px) {
-    font-size: 11px;
-  }
 `;
 
 export default function IntroduceMain() {
