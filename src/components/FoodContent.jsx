@@ -54,16 +54,14 @@ const FilterTag = styled(Noto700)`
     margin-right: 0;
   }
   &:hover {
-  background-color: #ff9900;
+    background-color: #ff9900;
   }
   @media screen and (max-width: 1200px) {
     font-size: 14px;
-  padding: 5px 10px;
-
+    padding: 5px 10px;
   }
   @media screen and (max-width: 900px) {
     margin-right: 0;
-
   }
 `;
 const FoodList = styled(Masonry)`
@@ -72,11 +70,11 @@ const FoodList = styled(Masonry)`
   display: -ms-flexbox; /* Not needed if autoprefixing */
   display: flex;
   margin-left: -15px; /* gutter size offset */
-  
- &>.my-masonry-grid_column {
-  padding-left: 30px; /* gutter size */
-  background-clip: padding-box;
-}
+
+  & > .my-masonry-grid_column {
+    padding-left: 30px; /* gutter size */
+    background-clip: padding-box;
+  }
 `;
 const FoodItem = styled.div`
   height: fit-content;
@@ -158,15 +156,15 @@ const MenuItem = styled.div`
     margin-right: 0;
     margin-top: 10px;
     &:first-child {
-    margin-top: 0;
-  }
-  @media screen and (max-width: 600px) {
-    margin-top: 0;
-    margin-right: 50px;
-  &:last-child {
-    margin-right: 0;
-  }
-  }
+      margin-top: 0;
+    }
+    @media screen and (max-width: 600px) {
+      margin-top: 0;
+      margin-right: 50px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
   }
 `;
 const MenuTitle = styled(Noto500)`
@@ -232,9 +230,9 @@ export default function FoodContent() {
   const breakpointObj = {
     default: 3,
     1200: 2,
-    600: 1
-  }
-  
+    600: 1,
+  };
+
   const tagArr = foodArr.map((food) => food.tag);
   const onFilterClick = (e) => {
     const selectedTag = e.target.innerHTML;
