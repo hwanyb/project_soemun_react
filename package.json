@@ -1,7 +1,7 @@
 {
-  "name": "project_soemun_react",
+  "name": "seomunnight",
   "version": "0.1.0",
-  "homepage": "https://hwanyb.github.io/project_soemun_react",
+  "homepage": "https://hwanyb.github.io/seomunnight",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
