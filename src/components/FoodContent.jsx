@@ -9,6 +9,19 @@ import Map from "./common/Map";
 const Base = styled.div`
   padding: 0 200px;
   margin-top: 50px;
+  margin-bottom: 100px;
+  @media screen and (max-width: 1600px) {
+    padding: 0 150px;
+  }
+  @media screen and (max-width: 1200px) {
+    padding: 0 100px;
+  }
+  @media screen and (max-width: 900px) {
+    padding: 0 50px;
+  }
+  @media screen and (max-width: 600px) {
+    padding: 0 20px;
+  }
 `;
 const FilterWrapper = styled.div`
   width: 100%;
@@ -18,6 +31,13 @@ const FilterWrapper = styled.div`
   padding: 20px 0;
   border-top: 1px solid #ffc806;
   border-bottom: 1px solid #ffc806;
+  flex-wrap: wrap;
+  @media screen and (max-width: 900px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    place-items: center;
+  }
 `;
 const FilterTag = styled(Noto700)`
   width: fit-content;
@@ -29,12 +49,34 @@ const FilterTag = styled(Noto700)`
   border-radius: 10px;
   cursor: pointer;
   margin-right: 40px;
+  transition: all 0.2s ease-in-out;
   &:last-child {
     margin-right: 0;
+  }
+  &:hover {
+  background-color: #ff9900;
+  }
+  @media screen and (max-width: 1200px) {
+    font-size: 14px;
+  padding: 5px 10px;
+
+  }
+  @media screen and (max-width: 900px) {
+    margin-right: 0;
+
   }
 `;
 const FoodList = styled(Masonry)`
   width: 100%;
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+  margin-left: -15px; /* gutter size offset */
+  
+ &>.my-masonry-grid_column {
+  padding-left: 30px; /* gutter size */
+  background-clip: padding-box;
+}
 `;
 const FoodItem = styled.div`
   height: fit-content;
@@ -46,11 +88,23 @@ const FoodItem = styled.div`
   box-shadow: 2px 2px 5px #08143563; ;
 `;
 const FoodImgWrapper = styled.div`
+  width: 100%;
+
   border-radius: 10px;
   overflow: hidden;
+  @media screen and (max-width: 600px) {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 `;
 const FoodImg = styled.img`
   width: 100%;
+  @media screen and (max-width: 600px) {
+    width: auto;
+    height: 500px;
+  }
 `;
 const FoodTitle = styled(PyeongBold)`
   font-size: 24px;
@@ -88,11 +142,31 @@ const MenuLabel = styled(Noto500)`
 const MenuWapper = styled.div`
   justify-content: center;
   padding: 0 20px;
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+  }
+  @media screen and (max-width: 600px) {
+    flex-direction: row;
+  }
 `;
 const MenuItem = styled.div`
   margin-right: 50px;
   &:last-child {
     margin-right: 0;
+  }
+  @media screen and (max-width: 900px) {
+    margin-right: 0;
+    margin-top: 10px;
+    &:first-child {
+    margin-top: 0;
+  }
+  @media screen and (max-width: 600px) {
+    margin-top: 0;
+    margin-right: 50px;
+  &:last-child {
+    margin-right: 0;
+  }
+  }
   }
 `;
 const MenuTitle = styled(Noto500)`
@@ -100,7 +174,7 @@ const MenuTitle = styled(Noto500)`
 `;
 const MenuPrice = styled(Noto700)`
   color: #ff9900;
-  margin-top: 10px;
+  margin-top: 5px;
 `;
 const LocationWrapper = styled.div`
   width: fit-content;
@@ -155,6 +229,12 @@ export default function FoodContent() {
   const [showModal, setShowModal] = useState(false);
   const [currentScrollTop, setCurrentScrollTop] = useState(0);
 
+  const breakpointObj = {
+    default: 3,
+    1200: 2,
+    600: 1
+  }
+  
   const tagArr = foodArr.map((food) => food.tag);
   const onFilterClick = (e) => {
     const selectedTag = e.target.innerHTML;
@@ -187,7 +267,7 @@ export default function FoodContent() {
           ))}
       </FilterWrapper>
       <FoodList
-        breakpointCols={3}
+        breakpointCols={breakpointObj}
         className="my-masonry-grid"
         columnClassName="my-masonry-grid_column"
       >
