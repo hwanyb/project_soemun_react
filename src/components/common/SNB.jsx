@@ -11,6 +11,9 @@ const Base = styled.aside`
   padding: 30px 10px;
   border-radius: 0 20px 20px 0;
   z-index: 999999;
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
 `;
 const NavItem = styled(Link)`
   margin-bottom: 30px;
