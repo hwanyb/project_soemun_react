@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/project_soemun_react/static/css/main.9a2028ea.css",
-    "main.js": "/project_soemun_react/static/js/main.d8391fa1.js",
-    "index.html": "/project_soemun_react/index.html",
-    "main.9a2028ea.css.map": "/project_soemun_react/static/css/main.9a2028ea.css.map",
-    "main.d8391fa1.js.map": "/project_soemun_react/static/js/main.d8391fa1.js.map"
+    "main.css": "/seomunnight/static/css/main.9a2028ea.css",
+    "main.js": "/seomunnight/static/js/main.be5fd0c2.js",
+    "index.html": "/seomunnight/index.html",
+    "main.9a2028ea.css.map": "/seomunnight/static/css/main.9a2028ea.css.map",
+    "main.be5fd0c2.js.map": "/seomunnight/static/js/main.be5fd0c2.js.map"
   },
   "entrypoints": [
     "static/css/main.9a2028ea.css",
-    "static/js/main.d8391fa1.js"
+    "static/js/main.be5fd0c2.js"
   ]
 }
