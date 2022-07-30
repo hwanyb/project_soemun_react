@@ -1,7 +1,5 @@
 import React from "react";
 import {
-  Animator,
-  ScrollPage,
   batch,
   Fade,
   MoveOut,

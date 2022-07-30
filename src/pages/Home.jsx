@@ -16,7 +16,6 @@ const HomeMain = styled.main`
   position: relative;
   top: 70px;
   width: 100%;
-  padding-bottom: 100px;
 `;
 const Section1 = styled.section`
   width: 100%;
