@@ -203,11 +203,26 @@ const MapModal = styled.div`
   position: absolute;
   top: ${(props) => `${props.currentScrollTop}px`};
   left: 0;
-  width: 100%;
-  height: 100vh;
+  width: 100vw;
+  height: calc(100vh - 70px);
   background-color: #081435a0;
-  padding: 200px;
+  padding: 0 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   backdrop-filter: blur(5px);
+  @media screen and (max-width: 1600px) {
+    padding: 0 150px;
+  }
+  @media screen and (max-width: 1200px) {
+    padding: 0 100px;
+  }
+  @media screen and (max-width: 900px) {
+    padding: 0 50px;
+  }
+  @media screen and (max-width: 600px) {
+    padding: 0 20px;
+  }
 `;
 const CloseBtn = styled(Icon)`
   position: absolute;

@@ -1,65 +1,65 @@
 export const HomeImgArr = [
     {
-      id: 1,
-      url: "https://github.com/hwanyb/project_seomun/blob/master/img/sec4_img01.jpg?raw=true",
+        id: 1,
+        url: "https://github.com/hwanyb/project_seomun/blob/master/img/sec4_img01.jpg?raw=true",
     },
     {
-      id: 2,
-      url: "https://github.com/hwanyb/project_seomun/blob/master/img/sec4_img02.jpg?raw=true",
+        id: 2,
+        url: "https://github.com/hwanyb/project_seomun/blob/master/img/sec4_img02.jpg?raw=true",
     },
     {
-      id: 3,
-      url: "https://github.com/hwanyb/project_seomun/blob/master/img/sec4_img03.jpg?raw=true",
+        id: 3,
+        url: "https://github.com/hwanyb/project_seomun/blob/master/img/sec4_img03.jpg?raw=true",
     },
     {
-      id: 4,
-      url: "https://github.com/hwanyb/project_seomun/blob/master/img/sec4_img04.jpg?raw=true",
+        id: 4,
+        url: "https://github.com/hwanyb/project_seomun/blob/master/img/sec4_img04.jpg?raw=true",
     },
     {
-      id: 5,
-      url: "https://github.com/hwanyb/project_seomun/blob/master/img/sec4_img05.jpg?raw=true",
+        id: 5,
+        url: "https://github.com/hwanyb/project_seomun/blob/master/img/sec4_img05.jpg?raw=true",
     },
     {
-      id: 6,
-      url: "https://github.com/hwanyb/project_seomun/blob/master/img/sec4_img06.jpg?raw=true",
+        id: 6,
+        url: "https://github.com/hwanyb/project_seomun/blob/master/img/sec4_img06.jpg?raw=true",
     },
     {
-      id: 7,
-      url: "https://github.com/hwanyb/project_seomun/blob/master/img/sec4_img07.jpg?raw=true",
+        id: 7,
+        url: "https://github.com/hwanyb/project_seomun/blob/master/img/sec4_img07.jpg?raw=true",
     },
     {
-      id: 8,
-      url: "https://github.com/hwanyb/project_seomun/blob/master/img/sec4_img08.jpg?raw=true",
+        id: 8,
+        url: "https://github.com/hwanyb/project_seomun/blob/master/img/sec4_img08.jpg?raw=true",
     },
     {
-      id: 9,
-      url: "https://github.com/hwanyb/project_seomun/blob/master/img/sec4_img09.jpg?raw=true",
+        id: 9,
+        url: "https://github.com/hwanyb/project_seomun/blob/master/img/sec4_img09.jpg?raw=true",
     },
     {
-      id: 10,
-      url: "https://github.com/hwanyb/project_seomun/blob/master/img/shrimp.jpg?raw=true",
+        id: 10,
+        url: "https://github.com/hwanyb/project_seomun/blob/master/img/shrimp.jpg?raw=true",
     },
     {
-      id: 11,
-      url: "https://github.com/hwanyb/project_seomun/blob/master/img/tangsu.jpg?raw=true",
+        id: 11,
+        url: "https://github.com/hwanyb/project_seomun/blob/master/img/tangsu.jpg?raw=true",
     },
     {
-      id: 12,
-      url: "https://github.com/hwanyb/project_seomun/blob/master/img/ttoeokbok.jpg?raw=true",
+        id: 12,
+        url: "https://github.com/hwanyb/project_seomun/blob/master/img/ttoeokbok.jpg?raw=true",
     },
     {
-      id: 13,
-      url: "https://github.com/hwanyb/project_seomun/blob/master/img/gogi.jpg?raw=true",
+        id: 13,
+        url: "https://github.com/hwanyb/project_seomun/blob/master/img/gogi.jpg?raw=true",
     },
     {
-      id: 14,
-      url: "https://github.com/hwanyb/project_seomun/blob/master/img/kabe.jpg?raw=true",
+        id: 14,
+        url: "https://github.com/hwanyb/project_seomun/blob/master/img/kabe.jpg?raw=true",
     },
     {
-      id: 15,
-      url: "https://github.com/hwanyb/project_seomun/blob/master/img/kkochi.jpg?raw=true",
+        id: 15,
+        url: "https://github.com/hwanyb/project_seomun/blob/master/img/kkochi.jpg?raw=true",
     },
-  ];
+];
 
 export const subwayArr = [
     {
@@ -279,13 +279,13 @@ export const mapArr = [
     {
         name: "동산상가",
         mapUrl: "http://kko.to/7Z3trbzC50",
-        mapImgUrl: "http://t1.daumcdn.net/roughmap/imgmap/1d607f7693aa2ee46602b7e6d96e08b6f676097050db9f586086453af216be82",
+        mapImgUrl: "http://t1.daumcdn.net/roughmap/imgmap/f3aadbb636bf434c990e7161495b9dfedc3b11133e923b9800437fdc473d1b82",
         loadViewUrl: "http://kko.to/vpr3AX1a-A",
     },
     {
         name: "대신",
         mapUrl: "http://kko.to/imgjGL_uoh",
-        mapImgUrl: "http://t1.daumcdn.net/roughmap/imgmap/7872e8e008f7fd86892ee9af764816346268616cc71d4b76d66ae5a58dc5c8f5",
+        mapImgUrl: "http://t1.daumcdn.net/roughmap/imgmap/56a1cd93d3cc7f357279a104f02ce162edcae7a9c76b441780d6259bdc79b240",
         loadViewUrl: "http://kko.to/P74am_0sH_",
     }
 ];
