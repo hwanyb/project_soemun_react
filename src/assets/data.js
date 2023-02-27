@@ -106,7 +106,7 @@ export const foodArr = [
         tag: '스테이크',
         desc: '',
         location: '동산상가',
-        image: 'http://www.nightseomun.com/upload/img/ya44773_01_1609722489.jpg',
+        image: 'https://github.com/hwanyb/project_seomun/blob/master/img/shrimp.jpg?raw=true',
         menu: [
             {
                 title: '스테이크 새우꼬치',
@@ -128,7 +128,7 @@ export const foodArr = [
         tag: '육류튀김류',
         location: '대신',
         desc: '즉석철판에 구운 삼겹살야채말이!특제소스에불맛을낸두가지맛! 매콤한야채뚱땡~달콤한야채뚱땡~~',
-        image: 'http://www.nightseomun.com/upload/img/ya13650_03_1488249125.jpg',
+        image: 'https://github.com/hwanyb/project_seomun/blob/master/img/sec4_img01.jpg?raw=true',
         menu: [
             {
                 title: '야채삼겹말이',
@@ -145,7 +145,7 @@ export const foodArr = [
         tag: '육류튀김류',
         location: '대신',
         desc: '쫀득 쫀득 달콤 새콤 탕수육 입니다^^',
-        image: 'http://www.nightseomun.com/upload/img/ya54852_01_1490267119.jpg',
+        image: 'https://github.com/hwanyb/project_seomun/blob/master/img/tangsu.jpg?raw=true',
         menu: [
             {
                 title: '차돌박야끼소바',
@@ -162,7 +162,7 @@ export const foodArr = [
         tag: '내장류',
         location: '대신',
         desc: '파 향 가득한 이모네막창',
-        image: 'http://www.nightseomun.com/upload/img/ya50862_02_1647619729.jpg',
+        image: 'https://d3oxv6xcx9d0j1.cloudfront.net/public/pr/2634/1c9d151d-48a3-4a1d-879c-e0d7f03466ba.jpg',
         menu: [
             {
                 title: '대파막창',
@@ -183,7 +183,7 @@ export const foodArr = [
         tag: '내장류',
         location: '대신',
         desc: '고소한 막창구이와 매콤한 중독성 있는 불막창',
-        image: 'http://www.nightseomun.com/upload/img/ya58665_03_1515160455.jpg',
+        image: 'https://github.com/hwanyb/project_seomun/blob/master/img/sec4_img08.jpg?raw=true',
         menu: [
             {
                 title: '반반막창',
@@ -204,7 +204,7 @@ export const foodArr = [
         tag: '면류',
         location: '동산상가',
         desc: '팟타이 Pad thai 泰国式炒米粉',
-        image: 'http://www.nightseomun.com/upload/img/ya70359_03_1515308335.jpg',
+        image: 'https://i.ytimg.com/vi/qNv30AF5HJg/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgWihPMA8=&rs=AOn4CLDRjgnXU43CB_megw4oAeq6aQnIsg',
         menu: [
             {
                 title: '팟타이',
@@ -225,7 +225,7 @@ export const foodArr = [
         tag: '디저트류',
         location: '대신',
         desc: '즉석에서 바로 만들어드리는 수제 철판 아이스크림',
-        image: 'http://www.nightseomun.com/upload/img/ya26383_03_1525622190.jpg',
+        image: 'https://i.ytimg.com/vi/sO35o3BZ4ug/maxresdefault.jpg',
         menu: [
             {
                 title: '초코 아이스롤',
@@ -250,7 +250,7 @@ export const foodArr = [
         tag: '면류',
         location: '대신',
         desc: '즉석에서 철판에 볶는 일본 정통요리!',
-        image: 'https://hwanyb.github.io/project_seomun/img/kabe.jpg?raw=true',
+        image: 'https://github.com/hwanyb/project_seomun/blob/master/img/kabe.jpg?raw=true',
         menu: [
             {
                 title: '카베츠야키',
